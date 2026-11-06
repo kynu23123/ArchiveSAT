@@ -7,9 +7,11 @@ import sampleScoring from "../samples/scoring.pdf?url&no-inline";
 
 export function ImageCard({ file, page, title }) {
   const canvas = useRef(null);
+  const scrollArea = useRef(null);
   const [document, setDocument] = useState(null);
   const [status, setStatus] = useState("");
   const [zoom, setZoom] = useState(100);
+  const [displayPixels, setDisplayPixels] = useState(0);
 
   useEffect(() => {
     setDocument(null);
@@ -23,21 +25,49 @@ export function ImageCard({ file, page, title }) {
   }, [file]);
 
   useEffect(() => {
-    if (!document) return;
+    if (!file) return;
+    const area = scrollArea.current;
+    const measure = () => setDisplayPixels(Math.ceil(area.clientWidth * window.devicePixelRatio));
+    const observer = new ResizeObserver(measure);
+    observer.observe(area);
+
+    let resolution;
+    function watchResolution() {
+      resolution?.removeEventListener("change", watchResolution);
+      resolution = matchMedia(`(resolution: ${window.devicePixelRatio}dppx)`);
+      resolution.addEventListener("change", watchResolution);
+      measure();
+    }
+    watchResolution();
+    return () => {
+      observer.disconnect();
+      resolution.removeEventListener("change", watchResolution);
+    };
+  }, [file]);
+
+  useEffect(() => {
+    if (!document || !displayPixels) return;
     let live = true;
     let render;
     setStatus("Rendering page…");
     document.getPage(page).then((pdfPage) => {
       if (!live) return;
       const surface = canvas.current;
-      const viewport = pdfPage.getViewport({ scale: Math.min(3.8, 2 * zoom / 100) });
+      const pageSize = pdfPage.getViewport({ scale: 1 });
+      const fitScale = Math.max(2, displayPixels / pageSize.width);
+      const scale = Math.min(
+        fitScale * zoom / 100,
+        8192 / Math.max(pageSize.width, pageSize.height),
+        Math.sqrt(24_000_000 / (pageSize.width * pageSize.height)),
+      );
+      const viewport = pdfPage.getViewport({ scale });
       surface.width = Math.ceil(viewport.width);
       surface.height = Math.ceil(viewport.height);
       render = pdfPage.render({ canvas: surface, viewport });
       return render.promise.then(() => { if (live) setStatus(""); });
     }).catch(() => { if (live) setStatus("This page could not be rendered."); });
     return () => { live = false; render?.cancel(); };
-  }, [document, page, zoom]);
+  }, [document, page, zoom, displayPixels]);
 
   return <figure className="paper-image-card">
     <figcaption><strong>{title}</strong><div className="zoom-tools">
@@ -47,7 +77,7 @@ export function ImageCard({ file, page, title }) {
     </div></figcaption>
     {!file ? <p className="empty-line">The source PDF is unavailable in this profile.</p> : <>
       {status && <p role="status" className="paper-status">{status}</p>}
-      <div className="paper-image-scroll" tabIndex={0} aria-label="Scrollable original PDF page">
+      <div ref={scrollArea} className="paper-image-scroll" tabIndex={0} aria-label="Scrollable original PDF page">
         <canvas ref={canvas} role="img" aria-label={title} style={{ width: zoom + "%" }} hidden={!document || Boolean(status)} />
       </div>
     </>}

@@ -53,13 +53,14 @@ $core = Join-Path $build 'Microsoft.Web.WebView2.Core.dll'
 $forms = Join-Path $build 'Microsoft.Web.WebView2.WinForms.dll'
 $loader = Join-Path $build 'WebView2Loader.dll'
 $license = Join-Path $build 'LICENSE.txt'
+$manifest = Join-Path $PSScriptRoot 'Archive.manifest'
 $output = Join-Path $build 'SAT Archive.exe'
 $rendererResources = @("/resource:$(Join-Path $dist 'index.html'),Renderer.index.html")
 $rendererResources += Get-ChildItem -LiteralPath (Join-Path $dist 'assets') -File | ForEach-Object {
     "/resource:$($_.FullName),Renderer.$($_.Name)"
 }
 
-& $compiler /nologo /target:winexe /platform:x64 /optimize+ "/out:$output" "/win32icon:$icon" `
+& $compiler /nologo /target:winexe /platform:x64 /optimize+ "/out:$output" "/win32icon:$icon" "/win32manifest:$manifest" `
     "/reference:$core" "/reference:$forms" "/resource:$core,Microsoft.Web.WebView2.Core.dll" `
     "/resource:$forms,Microsoft.Web.WebView2.WinForms.dll" "/resource:$loader,WebView2Loader.dll" `
     "/resource:$license,WebView2.LICENSE.txt" @rendererResources (Join-Path $PSScriptRoot 'Archive.cs')

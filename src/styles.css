@@ -24,7 +24,6 @@
   color: var(--ink);
   background: var(--background);
   font-synthesis: none;
-  -webkit-font-smoothing: antialiased;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -388,7 +387,7 @@ input::placeholder { color: var(--shade-6); }
 .sidebar .nav-link, .sidebar .subnav button { transition: background-color 180ms ease, color 180ms ease, scale 130ms ease; }
 @media (prefers-reduced-motion: no-preference) {
   .sidebar .nav-link:active, .sidebar .subnav button:active { scale: .97; }
-  .page-content > *, .page-content .metric-grid > .card, .page-content .panels-split > .card { animation: enter-block 280ms cubic-bezier(.2,.75,.25,1) both; }
+  .page-content > *, .page-content .metric-grid > .card, .page-content .panels-split > .card { animation: enter-block 280ms cubic-bezier(.2,.75,.25,1) backwards; }
   .page-content > :nth-child(2), .page-content .metric-grid > :nth-child(2), .page-content .panels-split > :nth-child(2) { animation-delay: 35ms; }
   .page-content > :nth-child(3), .page-content .metric-grid > :nth-child(3) { animation-delay: 65ms; }
   .page-content > :nth-child(n+4), .page-content .metric-grid > :nth-child(4) { animation-delay: 90ms; }
@@ -409,7 +408,7 @@ input::placeholder { color: var(--shade-6); }
 .review-navigation select { flex: 1; }
 .paper-image-card { margin-block: 12px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--shade-2); }
 .paper-image-card figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 8px 10px; }
-.paper-image-scroll { max-height: min(60vh, 720px); overflow: auto; background: var(--shade-1); }
+.paper-image-scroll { max-height: min(60vh, 720px); overflow: auto; scrollbar-gutter: stable; background: var(--shade-1); }
 .paper-image-scroll canvas { height: auto; max-width: none; background: white; }
 .paper-image-scroll canvas:not([hidden]) { display: block; }
 .import-review .paper-image-scroll { max-height: 36vh; }
