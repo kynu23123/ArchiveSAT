@@ -1,21 +1,24 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
-  ArrowDownToLine, ArrowRight, BookCopy, BookOpen, ChartNoAxesCombined, ChevronDown, ChevronUp,
-  ChevronRight, FileSpreadsheet, FileText, LayoutGrid, ListChecks, Plus, Search,
+  ArrowRight, BookCopy, BookOpen, ChartNoAxesCombined, ChevronDown, ChevronUp,
+  ChevronRight, FileText, LayoutGrid, Plus, Search,
   Settings2, Table2, Target, X,
 } from "lucide-react";
 import "@fontsource-variable/manrope/wght.css";
 import "@fontsource-variable/jetbrains-mono/wght.css";
-import { indexes, questionsFor, readState, seedForms, storageKey, summarize } from "./data.js";
+import { questionsFor, readState, seedForms, storageKey, summarize } from "./data.js";
 import { Bands, Breakdown, Dashboard, History, Quiz, Reference, Settings, Tests } from "./pages.jsx";
 import { Button, DotPattern, Modal } from "./ui.jsx";
+import { ImportForm } from "./papers.jsx";
+import { clearPapers } from "./pdf.js";
+import { readPreferences, usePreferences } from "./personalization.jsx";
 import "./styles.css";
 
 const links = [
   { id: "dashboard", label: "Dashboard", icon: LayoutGrid },
   { id: "tests", label: "Test library", icon: BookOpen },
-  { id: "history", label: "Score history", icon: ChartNoAxesCombined },
+  { id: "history", label: "Recent results", icon: ChartNoAxesCombined },
   { id: "bands", label: "Percentile bands", icon: Target },
   { id: "reference", label: "Scoring reference", icon: Table2 },
   { id: "settings", label: "Settings", icon: Settings2 },
@@ -23,9 +26,9 @@ const links = [
 
 function NavButton({ item, page, navigate, className = "", children }) {
   const Icon = item.icon;
-  return <button className={"nav-link " + className} aria-current={page === item.id ? "page" : undefined} onClick={() => navigate(item.id)}>
+  return <Button variant="ghost" className={"nav-link " + className} aria-current={page === item.id ? "page" : undefined} onClick={() => navigate(item.id)}>
     <Icon aria-hidden="true" /><span>{item.label}</span>{children}
-  </button>;
+  </Button>;
 }
 
 function Sidebar({ page, navigate, search }) {
@@ -41,9 +44,9 @@ function Sidebar({ page, navigate, search }) {
         <Button variant="ghost" className="icon-button" aria-label={expanded ? "Collapse dashboard links" : "Expand dashboard links"} aria-expanded={expanded} aria-controls="dashboard-links" onClick={() => setExpanded(!expanded)}><Chevron /></Button>
       </div>
       <div className="subnav" id="dashboard-links" hidden={!expanded}>
-        <button aria-current={page === "dashboard" ? "location" : undefined} onClick={() => navigate("dashboard")}>Overview</button>
-        <button aria-current={page === "history" ? "location" : undefined} onClick={() => navigate("history")}>Score history</button>
-        <button aria-current={page === "bands" ? "location" : undefined} onClick={() => navigate("bands")}>Percentile bands</button>
+        <Button variant="ghost" aria-current={page === "dashboard" ? "location" : undefined} onClick={() => navigate("dashboard")}>Overview</Button>
+        <Button variant="ghost" aria-current={page === "history" ? "location" : undefined} onClick={() => navigate("history")}>Recent results</Button>
+        <Button variant="ghost" aria-current={page === "bands" ? "location" : undefined} onClick={() => navigate("bands")}>Percentile bands</Button>
       </div>
       {links.filter(({ id }) => ["tests", "reference", "settings"].includes(id)).map((item) => <NavButton key={item.id} item={item} page={page} navigate={navigate} />)}
     </nav>
@@ -77,55 +80,6 @@ function Dock({ page, navigate, onAdd }) {
   </nav>;
 }
 
-function Attachment({ label, hint, accept, onChange, required }) {
-  return <label className="attachment">
-    {required ? <FileText /> : <FileSpreadsheet />}
-    <span><strong>{label}</strong><small>{hint}</small></span>
-    <input type="file" accept={accept} onChange={(event) => onChange(event.target.files[0]?.name ?? "")} />
-  </label>;
-}
-
-function ImportForm({ onCreate, onClose }) {
-  const [files, setFiles] = useState({ paper: "", scoring: "" });
-  const [index, setIndex] = useState("both");
-  const [profile, setProfile] = useState("sample");
-  const [name, setName] = useState("");
-  const [pending, setPending] = useState(null);
-
-  useEffect(() => {
-    if (!pending) return;
-    const timeout = setTimeout(() => onCreate(pending), 1100);
-    return () => clearTimeout(timeout);
-  }, [pending, onCreate]);
-
-  function submit(event) {
-    event.preventDefault();
-    if (!name.trim()) return;
-    setPending({
-      id: Date.now().toString(36), title: name.trim(), code: "Imported draft",
-      indexes: index === "both" ? indexes : [index], profileId: profile,
-      files: [files.paper, files.scoring].filter(Boolean),
-    });
-  }
-
-  if (pending) return <div className="import-working" role="status">
-    <div className="beam"><span><FileText /></span><i /><span><ListChecks /></span></div>
-    <strong>Preparing your sample quiz</strong><p>Setting up questions and indexes.</p>
-  </div>;
-
-  return <form className="import-form" onSubmit={submit}>
-    <label className="field"><span>Test name</span><input data-autofocus value={name} required onChange={(event) => setName(event.target.value)} placeholder="e.g. October 1993 SAT" maxLength={90} /></label>
-    <Attachment label="SAT paper" hint={files.paper || "PDF or image · optional for demo"} accept=".pdf,image/*" onChange={(paper) => setFiles({ ...files, paper })} required />
-    <Attachment label="Scoring sheets" hint={files.scoring || "PDF, image, or CSV · optional for demo"} accept=".pdf,image/*,.csv" onChange={(scoring) => setFiles({ ...files, scoring })} />
-    <div className="form-fields">
-      <label className="field"><span>Indexes</span><select value={index} onChange={(event) => setIndex(event.target.value)}><option value="both">Verbal + Math</option>{indexes.map((item) => <option key={item}>{item}</option>)}</select></label>
-      <label className="field"><span>Scoring profile</span><select value={profile} onChange={(event) => setProfile(event.target.value)}><option value="sample">Sample profile</option></select></label>
-    </div>
-    <p className="fine-print">The prototype saves filenames locally and uses built-in questions.</p>
-    <div className="modal-actions"><Button onClick={onClose}>Cancel</Button><Button type="submit" variant="primary"><ArrowDownToLine /> Create sample test</Button></div>
-  </form>;
-}
-
 function SearchWorkspace({ forms, navigate, onStart }) {
   const [query, setQuery] = useState("");
   const matches = links.filter((item) => item.label.toLowerCase().includes(query.trim().toLowerCase()));
@@ -141,6 +95,8 @@ function SearchWorkspace({ forms, navigate, onStart }) {
 
 function App() {
   const [state, setState] = useState(readState);
+  const [preferences, setPreferences] = useState(readPreferences);
+  usePreferences(preferences);
   const [view, setView] = useState({ page: "dashboard" });
   const [dialog, setDialog] = useState(null);
   const [storageError, setStorageError] = useState(false);
@@ -212,7 +168,7 @@ function App() {
   function create(form) {
     setState((current) => ({ ...current, forms: [form, ...current.forms] }));
     navigate("tests");
-    setNotice("Sample test added.");
+    setNotice("PDF test added.");
   }
 
   function discard(id) {
@@ -242,7 +198,7 @@ function App() {
     case "history": content = <History results={results} onOpen={open} />; break;
     case "bands": content = <Bands key={view.id ?? "latest"} results={results} initialResultId={view.id} />; break;
     case "reference": content = <Reference />; break;
-    case "settings": content = <Settings onReset={() => showDialog("reset")} />; break;
+    case "settings": content = <Settings preferences={preferences} onPreferences={setPreferences} onReset={() => showDialog("reset")} />; break;
     case "result": content = result && <Breakdown key={result.id} result={result} onBack={() => navigate("history")} navigate={navigate} />; break;
     case "quiz": content = attempt && <Quiz form={form} attempt={attempt}
       onAnswer={(answer) => updateAttempt((old) => {
@@ -258,7 +214,7 @@ function App() {
 
   const omitted = attempt ? questionsFor(form).length - Object.keys(attempt.answers).length : 0;
   const dialogs = {
-    import: ["Add a test", "Attach a paper and scoring sheet or create a sample test."],
+    import: ["Add a test", "Use one combined PDF or attach the scoring sheet separately."],
     search: ["Search workspace", "Find a page or jump to a test."],
     discard: ["Discard this attempt?", "The answers and saved position for this attempt will be cleared."],
     finish: ["Submit this test?", omitted ? omitted + (omitted === 1 ? " question is" : " questions are") + " unanswered. You can review your answers before submitting." : "All questions are answered. Submit to view your scores."],
@@ -276,7 +232,7 @@ function App() {
     </header>
     <main id="main" tabIndex={-1} ref={main}>
       {storageError && <p role="alert" className="storage-alert">Browser storage is unavailable. Progress lasts for this visit.</p>}
-      {content}
+      <div className="page-content" key={view.page + (view.id ?? "")}>{content}</div>
     </main>
     <Dock page={navPage} navigate={navigate} onAdd={add} />
     {notice && <div className="toast" role="status">{notice}<Button className="icon-button" variant="ghost" aria-label="Dismiss notice" onClick={() => setNotice("")}><X /></Button></div>}
@@ -285,7 +241,12 @@ function App() {
       {dialog?.type === "search" && <SearchWorkspace forms={state.forms} navigate={navigate} onStart={start} />}
       {dialog?.type === "discard" && <div className="modal-actions"><Button onClick={close}>Cancel</Button><Button variant="primary" onClick={() => discard(dialog.id)}>Discard attempt</Button></div>}
       {dialog?.type === "finish" && <div className="modal-actions"><Button onClick={close}>Keep reviewing</Button><Button variant="primary" onClick={finish}>Submit test <ArrowRight /></Button></div>}
-      {dialog?.type === "reset" && <div className="modal-actions"><Button onClick={close}>Cancel</Button><Button variant="primary" onClick={() => { setState({ forms: seedForms, attempts: {}, results: [] }); close(); setNotice("Local progress cleared."); }}>Reset progress</Button></div>}
+      {dialog?.type === "reset" && <div className="modal-actions"><Button onClick={close}>Cancel</Button><Button variant="primary" onClick={async () => {
+        try {
+          if (state.forms.some((form) => form.paperPages)) await clearPapers();
+          setState({ forms: seedForms, attempts: {}, results: [] }); close(); setNotice("Local progress cleared.");
+        } catch { setNotice("Could not clear the saved PDFs. Try again."); }
+      }}>Reset progress</Button></div>}
     </Modal>
   </>;
 }

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Activity, ArrowLeft, ArrowRight, BookOpen, ChartNoAxesCombined, Check, ChevronRight, CircleHelp, FileText, ListChecks, Plus, RotateCcw, ScanLine, Target, X } from "lucide-react";
 import { Button, Card } from "./ui.jsx";
-import { Distribution, Gauge, num, ScoreChart } from "./charts.jsx";
+import { CountingNumber, Distribution, Gauge, num } from "./charts.jsx";
 import { indexes, ordinal, questionsFor, satToIq, scoringProfiles } from "./data.js";
+import { PaperQuestion, ScoringPages } from "./papers.jsx";
+import { Personalization } from "./personalization.jsx";
 
 export function PageHead({ title, description, action, compact = false }) {
   return <header className={"page-head" + (compact ? " page-head-compact" : "")}><div><h1>{title}</h1>{description && <p>{description}</p>}</div>{action}</header>;
@@ -50,18 +52,18 @@ export function Dashboard({ results, state, onAdd, onStart, onOpen, navigate }) 
     <div className="metric-grid">
       <Metric label="Latest SAT score" value={num(latest?.total)} caption={delta == null ? "Combined verbal and math" : (delta > 0 ? "+" : "") + delta + " pts vs. previous test"} icon={Activity} />
       <Metric label="FSIQ equivalent" value={num(latest?.iq)} caption="Historical SAT conversion" icon={Target} />
-      <Metric label="Percentile rank" value={ordinal(latest?.percentile)} caption="Illustrative population rank" icon={ChartNoAxesCombined} />
+      <Metric label="Percentile rank" value={<CountingNumber value={latest?.percentile} format={ordinal} />} caption="Illustrative population rank" icon={ChartNoAxesCombined} />
       <Metric label="Tests completed" value={num(results.length)} caption={Object.keys(state.attempts).length + " in progress"} icon={ListChecks} />
     </div>
     <h2 className="section-heading">Score statistics</h2>
     <div className="panels-split">
-      <Card className="panel history-panel">
-        <PanelHead title="Score history" text="Verbal and math scores across completed tests." action={<Button className="quiet-button" onClick={() => navigate("history")}>All results <ChevronRight /></Button>} />
-        <ScoreChart results={results.slice(0, 8)} />
+      <Card className="panel distribution-panel">
+        <PanelHead title="Population distribution" text="Percentile bands for the latest combined score." action={<Button className="quiet-button" onClick={() => navigate("bands")}>View bands <ChevronRight /></Button>} />
+        <Distribution iq={latest?.iq} />
       </Card>
       <Card className="panel percentile-panel">
         <PanelHead title="FSIQ percentile" text="Combined score against reference bands." />
-        <Gauge iq={latest?.iq} rank={latest?.percentile} />
+        <Gauge iq={latest?.iq} rank={latest?.percentile} animate />
         <div className="gauge-footer"><span><strong className="mono">{latest?.iq == null ? "—" : (latest.iq - 5) + "–" + (latest.iq + 5)}</strong><small>Demo range (±5)</small></span>
           <Button className="quiet-button" onClick={() => navigate("bands")}>View bands <ChevronRight /></Button>
         </div>
@@ -90,7 +92,7 @@ export function Tests({ state, onAdd, onStart, onDiscard }) {
   return <>
     <PageHead title="Test library" description="Start a sample quiz or resume a saved attempt." action={<Button variant="primary" onClick={onAdd}><Plus /> Add test</Button>} />
     <Card className="panel">
-      <PanelHead title="Available forms" text="All quizzes in this prototype use sample questions." />
+      <PanelHead title="Available forms" text="Imported papers and built-in practice forms." />
       {state.forms.map((form) => {
         const attempt = state.attempts[form.id];
         const count = Object.keys(attempt?.answers ?? {}).length;
@@ -113,9 +115,8 @@ export function History({ results, onOpen }) {
   const [filter, setFilter] = useState("all");
   const visible = filter === "practice" ? results.filter((result) => !result.sample) : filter === "sample" ? results.filter((result) => result.sample) : results;
   return <>
-    <PageHead title="Score history" description="Compare completed tests and open a result to review each index." />
-    <Card className="panel"><PanelHead title="Scaled score trend" text="Combined verbal and math scores." /><ScoreChart results={visible} /></Card>
-    <Card className="panel page-panel">
+    <PageHead title="Recent results" description="Review completed tests, scores, and answers." />
+    <Card className="panel">
       <PanelHead title="Completed tests" action={<select aria-label="Filter results" value={filter} onChange={(event) => setFilter(event.target.value)}><option value="all">All results</option><option value="practice">My attempts</option><option value="sample">Sample results</option></select>} />
       <ResultsTable results={visible} onOpen={onOpen} />
     </Card>
@@ -126,32 +127,32 @@ export function Breakdown({ result, onBack, navigate }) {
   const [selectedIndex, setSelectedIndex] = useState("All");
   const items = questionsFor(result.form);
   return <>
-    <PageHead title={result.form.title} description={result.form.code + " · " + (result.sample ? "Seeded sample result" : "Sample quiz result")} action={<Button onClick={onBack}><ArrowLeft /> Score history</Button>} />
+    <PageHead title={result.form.title} description={result.form.code + " · " + (result.sample ? "Seeded sample result" : "Quiz result")} action={<Button onClick={onBack}><ArrowLeft /> Recent results</Button>} />
     <div className="metric-grid result-metrics">
-      <Metric label="Scaled SAT" value={num(result.total)} caption={result.total == null ? "Requires both indexes" : "Verbal plus math"} icon={Activity} />
+      <Metric label="Scaled SAT" value={num(result.total)} caption={result.form.paperPages ? "Scoring scale unavailable" : result.total == null ? "Requires both indexes" : "Verbal plus math"} icon={Activity} />
       <Metric label="FSIQ equivalent" value={num(result.iq)} caption={result.total != null && result.iq == null ? "Outside the supplied table" : "Historical conversion table"} icon={Target} />
       <Metric label="Percentile rank" value={ordinal(result.percentile)} caption="Illustrative population rank" icon={ChartNoAxesCombined} />
     </div>
     <Card className="panel page-panel">
-      <PanelHead title="Index scores" text={result.sample ? "Seeded scaled scores illustrate the display. Raw counts come from sample answers." : "Raw scores use the selected form’s sample scoring profile."} action={<Button onClick={() => navigate("bands", result.id)}>Percentile bands <ChevronRight /></Button>} />
+      <PanelHead title="Index scores" text={result.form.paperPages ? "Right and wrong counts use the verified key. Answers without a key are ungraded." : result.sample ? "Seeded scaled scores illustrate the display. Raw counts come from sample answers." : "Raw scores use the selected form’s sample scoring profile."} action={<Button onClick={() => navigate("bands", result.id)}>Percentile bands <ChevronRight /></Button>} />
       <div className="table-scroll"><table className="data-table">
-        <thead><tr>{["Index", "Right", "Wrong", "Omitted", "Raw", "Rounded", "Scaled", "IQ eq.", "Percentile"].map((label) => <th key={label} scope="col">{label}</th>)}</tr></thead>
+        <thead><tr>{(result.form.paperPages ? ["Index", "Right", "Wrong", "Omitted", "Ungraded"] : ["Index", "Right", "Wrong", "Omitted", "Raw", "Rounded", "Scaled", "IQ eq.", "Percentile"]).map((label) => <th key={label} scope="col">{label}</th>)}</tr></thead>
         <tbody>{result.sections.map((section) => <tr key={section.name}><th scope="row">{section.name}</th>
-          {[section.right, section.wrong, section.omitted, Number(section.raw.toFixed(2)), section.rounded, section.scaled, section.iq, ordinal(section.percentile)].map((value, i) => <td className="mono" key={i}>{value ?? "—"}</td>)}
+          {(result.form.paperPages ? [section.right, section.wrong, section.omitted, section.ungraded] : [section.right, section.wrong, section.omitted, Number(section.raw.toFixed(2)), section.rounded, section.scaled, section.iq, ordinal(section.percentile)]).map((value, i) => <td className="mono" key={i}>{value ?? "—"}</td>)}
         </tr>)}</tbody>
       </table></div>
-      <p className="fine-print">Index IQ equivalents use illustrative section mappings. The supplied conversion table covers the combined SAT score.</p>
+      {result.form.paperPages ? <ScoringPages form={result.form} /> : <p className="fine-print">Index IQ equivalents use illustrative section mappings. The supplied conversion table covers the combined SAT score.</p>}
     </Card>
     <Card className="panel page-panel">
       <PanelHead title="Answer review" text="Compare your responses with the answer key." action={<select aria-label="Filter answers by index" value={selectedIndex} onChange={(event) => setSelectedIndex(event.target.value)}>{["All", ...result.form.indexes].map((index) => <option key={index}>{index}</option>)}</select>} />
       {items.map((question, i) => {
         if (selectedIndex !== "All" && question.index !== selectedIndex) return null;
         const selected = result.answers[i];
-        const Icon = selected == null ? CircleHelp : selected === question.key ? Check : X;
+        const Icon = selected == null || question.key == null ? CircleHelp : selected === question.key ? Check : X;
         return <div key={i} className="answer-review">
           <span className="question-number mono">{String(i + 1).padStart(2, "0")}</span>
-          <div><strong>{question.prompt}</strong><small>Your answer: {question.choices[selected] ?? "Omitted"} · Key: {question.choices[question.key]}</small></div>
-          <span className="status"><Icon /> {selected == null ? "Omitted" : selected === question.key ? "Correct" : "Incorrect"}</span>
+          <div><strong>{question.prompt}{question.page ? " · Paper page " + question.page : ""}</strong><small>Your answer: {question.choices[selected] ?? "Omitted"} · Key: {question.choices[question.key] ?? "Unavailable"}</small></div>
+          <span className="status"><Icon /> {selected == null ? "Omitted" : question.key == null ? "Ungraded" : selected === question.key ? "Correct" : "Incorrect"}</span>
         </div>;
       })}
     </Card>
@@ -198,10 +199,11 @@ export function Reference() {
   </>;
 }
 
-export function Settings({ onReset }) {
+export function Settings({ preferences, onPreferences, onReset }) {
   return <>
     <PageHead title="Settings" description="Manage progress stored in this browser." />
-    <Card className="panel"><PanelHead title="Local progress" text="Saved answers, completed attempts, and added form details are stored in this browser." />
+    <Personalization preferences={preferences} onChange={onPreferences} />
+    <Card className="panel page-panel"><PanelHead title="Local progress" text="Saved PDFs, answers, and completed attempts are stored on this device." />
       <div className="library-row"><div className="test-cell"><RowIcon icon={RotateCcw} /><div><strong>Reset progress</strong><small>Clear results, saved attempts, and added forms.</small></div></div>
         <Button onClick={onReset}>Reset progress</Button>
       </div>
@@ -216,15 +218,16 @@ export function Quiz({ form, attempt, onAnswer, onCursor, onExit, onFinish, onDi
   const count = Object.keys(attempt.answers).length;
   const chosen = attempt.answers[cursor];
   return <>
-    <PageHead title={form.title} description={form.code + " · Sample quiz"} action={<Button onClick={onExit}>Save & exit <ArrowRight /></Button>} />
+    <PageHead title={form.title} description={form.paperPages ? "Original PDF · Practice quiz" : form.code + " · Sample quiz"} action={<Button onClick={onExit}>Save & exit <ArrowRight /></Button>} />
     <div className="panels-split quiz-layout">
       <Card className="panel question-card">
         <div className="question-meta"><span className="status">{item.index}</span><span className="mono muted">Question {cursor + 1} / {items.length}</span></div>
         <h2>{item.prompt}</h2>
         {item.passage && <blockquote>{item.passage}</blockquote>}
+        {item.page && <PaperQuestion key={item.page} form={form} item={item} />}
         <fieldset className="answer-options"><legend className="sr-only">Choose one answer</legend>{item.choices.map((choice, i) => <label key={i} className={chosen === i ? "chosen" : ""}>
           <input name="answer" type="radio" value={i} checked={chosen === i} onChange={() => onAnswer(i)} />
-          <span className="answer-letter mono">{String.fromCharCode(65 + i)}</span><span>{choice}</span>{chosen === i && <Check />}
+          <span className="answer-letter mono">{String.fromCharCode(65 + i)}</span><span>{item.page ? <span className="sr-only">{choice}</span> : choice}</span>{chosen === i && <Check />}
         </label>)}</fieldset>
         <div className="quiz-controls"><Button onClick={() => onCursor(cursor - 1)} disabled={cursor === 0}><ArrowLeft /> Previous</Button>
           {chosen != null && <Button variant="ghost" onClick={() => onAnswer(null)}>Clear answer</Button>}

@@ -61,7 +61,7 @@ export const initialState = {
 };
 
 export function questionsFor(form) {
-  return questions.filter((question) => form.indexes.includes(question.index));
+  return form.questions ?? questions.filter((question) => form.indexes.includes(question.index));
 }
 
 export function interpolate(value, table) {
@@ -88,25 +88,28 @@ export function summarize(form, result) {
     let right = 0;
     let wrong = 0;
     let omitted = 0;
+    let ungraded = 0;
     let raw = 0;
     items.forEach((question, i) => {
       if (question.index !== name) return;
       const answer = result.answers[i];
       if (answer == null) omitted++;
+      else if (question.key == null) ungraded++;
       else if (answer === question.key) {
         right++;
         raw++;
       } else {
         wrong++;
-        raw -= profile.penalties[question.choices.length] ?? 0;
+        raw -= profile?.penalties[question.choices.length] ?? 0;
       }
     });
-    const rounded = profile.round(raw);
-    const scaled = result.scaled?.[name] ?? profile.scaledByRaw[name][rounded];
-    const iq = interpolate(scaled, profile.iqByIndex[name]);
-    return { name, right, wrong, omitted, raw, rounded, scaled, iq, percentile: percentile(iq) };
+    const rounded = profile?.round(raw) ?? null;
+    const scaled = result.scaled?.[name] ?? profile?.scaledByRaw[name][rounded] ?? null;
+    const iq = profile ? interpolate(scaled, profile.iqByIndex[name]) : null;
+    return { name, right, wrong, omitted, ungraded, raw: profile ? raw : null, rounded, scaled, iq, percentile: percentile(iq) };
   });
-  const total = sections.length === indexes.length ? sections.reduce((sum, section) => sum + section.scaled, 0) : null;
+  const total = sections.length === indexes.length && sections.every((section) => section.scaled != null)
+    ? sections.reduce((sum, section) => sum + section.scaled, 0) : null;
   const iq = interpolate(total, satToIq);
   return { ...result, form, sections, total, iq, percentile: percentile(iq) };
 }
