@@ -3,3 +3,4 @@
 historical/** -text
 *.png -text
 *.pdf -text
+*.exe -text
