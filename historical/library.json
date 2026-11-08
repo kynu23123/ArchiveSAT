@@ -1,0 +1,6515 @@
+{
+  "version": "1.0",
+  "status": "curated practice",
+  "fingerprintMethod": "SHA-256 of sorted four-word OCR shingles; matching uses section-level overlap and printed identifiers.",
+  "sources": [
+    {
+      "id": "12365d26",
+      "label": "10 SATs, 1st edition",
+      "group": "10 SATs, 1st edition",
+      "year": 1983,
+      "filename": "12365d26-96b7-4fb1-a4c5-9c79534dd3f6.pdf",
+      "sha256": "1dbae2c48516632b5a92083ff6f056c50de62fa9ef2dd5c72cf468b540575ea7",
+      "pages": 308,
+      "note": null,
+      "formIds": [
+        "12365d26-test-1",
+        "12365d26-test-2",
+        "12365d26-test-4",
+        "12365d26-test-5",
+        "12365d26-test-6",
+        "12365d26-test-7",
+        "12365d26-test-8",
+        "12365d26-test-9",
+        "12365d26-test-10",
+        "10SATs_2nd-test-1"
+      ]
+    },
+    {
+      "id": "10SATs_2nd",
+      "label": "10 SATs, 2nd edition",
+      "group": "10 SATs, 2nd edition",
+      "year": 1986,
+      "filename": "10SATs_2nd_edition.pdf",
+      "sha256": "017b70c4d797c8aa4426f8b2b342d0322490386ec4baee0fb48b54793323a5c0",
+      "pages": 308,
+      "note": null,
+      "formIds": [
+        "10SATs_2nd-test-1",
+        "10SATs_2nd-test-2",
+        "10SATs_2nd-test-3",
+        "10SATs_2nd-test-4",
+        "10SATs_2nd-test-5",
+        "10SATs_2nd-test-6",
+        "10SATs_2nd-test-7",
+        "10SATs_2nd-test-8",
+        "10SATs_2nd-test-9",
+        "10SATs_2nd-test-10"
+      ]
+    },
+    {
+      "id": "10SATs_3rd",
+      "label": "10 SATs, 3rd edition",
+      "group": "10 SATs, 3rd edition",
+      "year": 1988,
+      "filename": "10SATs_3rd_edition.pdf",
+      "sha256": "f865621074adbf1206934077658543df0bdf203956559c5e625c803078940205",
+      "pages": 308,
+      "note": null,
+      "formIds": [
+        "10SATs_3rd-test-1",
+        "10SATs_3rd-test-2",
+        "10SATs_3rd-test-3",
+        "10SATs_3rd-test-4",
+        "10SATs_3rd-test-5",
+        "10SATs_3rd-test-6",
+        "10SATs_3rd-test-7",
+        "10SATs_3rd-test-8",
+        "10SATs_3rd-test-9",
+        "10SATs_3rd-test-10"
+      ]
+    },
+    {
+      "id": "012a3140",
+      "label": "Standalone scan 012a3140",
+      "group": "Standalone PDFs",
+      "year": null,
+      "filename": "012a3140-c45b-4f04-8fdc-ae496aece704.pdf",
+      "sha256": "95598f8a4c6d002fdd2abd30197d08e625180e47005bb4fbd97dff7eed8776f2",
+      "pages": 28,
+      "note": null,
+      "formIds": [
+        "012a3140"
+      ]
+    },
+    {
+      "id": "042c3604",
+      "label": "Standalone scan 042c3604",
+      "group": "Standalone PDFs",
+      "year": null,
+      "filename": "042c3604-c4a1-4c12-8be6-ce602eb9f188.pdf",
+      "sha256": "37e6dc0e46c96e63c54f98d5b8309581c4e9ba765a51efd0dba96c5d2918b046",
+      "pages": 18,
+      "note": "Available as unscored practice. The supplied packet does not identify its historical test form; its answer key and conversion table are retained as source references.",
+      "formIds": [
+        "042c3604"
+      ],
+      "referenceFile": "042c3604.pdf",
+      "referenceHash": "9e156190d5155e72c797c61e35a1fcb9f303a6e534129b24ada1f57136bf4833",
+      "referencePages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "title": "Unidentified Form 1"
+    },
+    {
+      "id": "09451a48",
+      "label": "Standalone scan 09451a48",
+      "group": "Standalone PDFs",
+      "year": null,
+      "filename": "09451a48-c77e-49c0-9b36-bf167b592f22.pdf",
+      "sha256": "c7ea743e07eb236b64bd63ac4b97a47d22814a33cbcf09607c950c852221a601",
+      "pages": 22,
+      "note": null,
+      "formIds": [
+        "09451a48"
+      ]
+    },
+    {
+      "id": "151e61b7",
+      "label": "Standalone scan 151e61b7",
+      "group": "Standalone PDFs",
+      "year": null,
+      "filename": "151e61b7-a905-4af9-991d-17ef66b9e933.pdf",
+      "sha256": "f5c4aac081c491dd137262c0695fdddc5c7ca18e9f052edb72cab1edbd05c9ed",
+      "pages": 22,
+      "note": null,
+      "formIds": [
+        "151e61b7"
+      ]
+    },
+    {
+      "id": "1ba0fa17",
+      "label": "Standalone scan 1ba0fa17",
+      "group": "Standalone PDFs",
+      "year": null,
+      "filename": "1ba0fa17-7aa2-4b67-b20b-25436ff8e97f.pdf",
+      "sha256": "c0b0361adba8723cacc708d4eed2b3488759ade22ea6a9fcdcaf492b25a9c9eb",
+      "pages": 22,
+      "note": "Available as unscored practice. The supplied packet does not identify its historical test form; its answer key and conversion table are retained as source references.",
+      "formIds": [
+        "1ba0fa17"
+      ],
+      "referenceFile": "1ba0fa17.pdf",
+      "referenceHash": "c0fc3c526dfaeb91d5746d05fe6c9f14efaaeef56ff6d71d5fe8aed34dae2b69",
+      "referencePages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "title": "Unidentified Form 2"
+    },
+    {
+      "id": "2d1c0995",
+      "label": "Standalone scan 2d1c0995",
+      "group": "Standalone PDFs",
+      "year": null,
+      "filename": "2d1c0995-402b-4fff-a6e8-0b4804441a53.pdf",
+      "sha256": "1a6bb3931a12e65bacca82a8fe482da1748053a311038fd90299b9c72ef7ad95",
+      "pages": 26,
+      "note": "Alternate scan of third-edition Form 0Z. The appended normalization and unofficial IQ tables are outside the form reference.",
+      "formIds": [
+        "10SATs_3rd-test-3"
+      ]
+    },
+    {
+      "id": "44c1853d",
+      "label": "Standalone scan 44c1853d",
+      "group": "Standalone PDFs",
+      "year": null,
+      "filename": "44c1853d-0925-4293-b688-880554e676bc.pdf",
+      "sha256": "004dafdcaa397e7b75d9f9a19d19984d47c3e1fc89355e981526e0fc4e46d568",
+      "pages": 22,
+      "note": null,
+      "formIds": [
+        "44c1853d"
+      ]
+    },
+    {
+      "id": "9ab02bc9",
+      "label": "Standalone scan 9ab02bc9",
+      "group": "Standalone PDFs",
+      "year": null,
+      "filename": "9ab02bc9-a0b4-4be8-9b2c-7a4df6a9f4d6.pdf",
+      "sha256": "e91a28d4c9cafde2f8a37473929426ab08a201e5ba158ff985443d9bd3bbdee1",
+      "pages": 22,
+      "note": null,
+      "formIds": [
+        "9ab02bc9"
+      ]
+    },
+    {
+      "id": "eed9ccf8",
+      "label": "Standalone scan eed9ccf8",
+      "group": "Standalone PDFs",
+      "year": null,
+      "filename": "eed9ccf8-4733-48c7-8817-a0c616a78941.pdf",
+      "sha256": "b25a073e6da2cf56eb743493eeb123f3c7e37b930d23c9c45b495495f77df9f5",
+      "pages": 26,
+      "note": null,
+      "formIds": [
+        "eed9ccf8"
+      ]
+    }
+  ],
+  "forms": [
+    {
+      "id": "12365d26-test-1",
+      "title": "Practice Test 1",
+      "code": "Test 1",
+      "library": true,
+      "asset": "12365d26-test-1.pdf",
+      "assetSha256": "301c96a5de3a1463545eacbbf742102dbd5ae74076ad194173b88f173a82ac48",
+      "indexes": [
+        "Verbal",
+        "Math",
+        "TSWE"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            40,
+            41,
+            42,
+            43
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            44,
+            45,
+            46,
+            47
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 6,
+          "index": "TSWE",
+          "count": 50,
+          "pages": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "sourcePages": [
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 25,
+          "label": "Scoring instructions",
+          "originalPage": 64
+        },
+        {
+          "source": "paper",
+          "number": 26,
+          "label": "Scoring worksheet",
+          "originalPage": 65
+        },
+        {
+          "source": "paper",
+          "number": 27,
+          "label": "Answer key",
+          "originalPage": 66
+        },
+        {
+          "source": "paper",
+          "number": 28,
+          "label": "Raw-to-scaled table",
+          "originalPage": 67
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "12365d26",
+          "label": "10 SATs, 1st edition · Test 1",
+          "questionPages": "40–63",
+          "scoringPages": [
+            {
+              "number": 64,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 65,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 66,
+              "label": "Answer key"
+            },
+            {
+              "number": 67,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": null,
+          "questionTextFingerprint": "ddf4a1d2d83d84cd310f7ff9cc3644437b5d4911d5b29cc1666dcf9f93539418"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "12365d26-test-2",
+      "title": "SAT Form 2I",
+      "code": "Test 2",
+      "library": true,
+      "asset": "12365d26-test-2.pdf",
+      "assetSha256": "1db48db8e210b455f5e3c83f3505e4d465f02b9e4d60b817a6c6a03ee5d0c238",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            77,
+            78,
+            79,
+            80
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            81,
+            82,
+            83,
+            84
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            85,
+            86,
+            87,
+            88,
+            89,
+            90
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            91,
+            92,
+            93,
+            94
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 95
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 96
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 97
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 98
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "12365d26",
+          "label": "10 SATs, 1st edition · Test 2",
+          "questionPages": "77–94",
+          "scoringPages": [
+            {
+              "number": 95,
+              "label": "Answer key"
+            },
+            {
+              "number": 96,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 97,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 98,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "2I",
+          "questionTextFingerprint": "dabba8048fef8332d593b38d248959709a27039f1e8d12a690f6a083cbc7e12c"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "12365d26-test-4",
+      "title": "SAT Form 3F",
+      "code": "Test 4",
+      "library": true,
+      "asset": "12365d26-test-4.pdf",
+      "assetSha256": "40a7e5f7fb984fc845caf9a939f6ee2d5db184476b511f9f332e179de572db7e",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            129,
+            130,
+            131,
+            132
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            133,
+            134,
+            135,
+            136
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            137,
+            138,
+            139,
+            140,
+            141,
+            142
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            143,
+            144,
+            145,
+            146
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 147
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 148
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 149
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 150
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "12365d26",
+          "label": "10 SATs, 1st edition · Test 4",
+          "questionPages": "129–146",
+          "scoringPages": [
+            {
+              "number": 147,
+              "label": "Answer key"
+            },
+            {
+              "number": 148,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 149,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 150,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "3F",
+          "questionTextFingerprint": "fc50194abdb6855bd14652df27a9ba6cae256d157083e94c7a6a581b3c9eeef0"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "12365d26-test-5",
+      "title": "SAT Form 3X",
+      "code": "Test 5",
+      "library": true,
+      "asset": "12365d26-test-5.pdf",
+      "assetSha256": "e7c164d5c064579fe22ff4610700e0691cc0a572012610c5ca4f2a4d6a5e5ea1",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            155,
+            156,
+            157,
+            158
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            159,
+            160,
+            161,
+            162
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            163,
+            164,
+            165,
+            166,
+            167,
+            168
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            169,
+            170,
+            171,
+            172
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 173
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 174
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 175
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 176
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "12365d26",
+          "label": "10 SATs, 1st edition · Test 5",
+          "questionPages": "155–172",
+          "scoringPages": [
+            {
+              "number": 173,
+              "label": "Answer key"
+            },
+            {
+              "number": 174,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 175,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 176,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "3X",
+          "questionTextFingerprint": "57fa431bbb1b425b829eccb175752091f28dddc7ee9abb81e417f16a86444b2d"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "12365d26-test-6",
+      "title": "SAT Form 0X",
+      "code": "Test 6",
+      "library": true,
+      "asset": "12365d26-test-6.pdf",
+      "assetSha256": "f3ef550e2fc83298e723a1f36ac2ee7821a1c63b7f83a569ca06c10484530ec2",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourcePages": [
+            181,
+            182,
+            183,
+            184,
+            185,
+            186
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourcePages": [
+            187,
+            188,
+            189,
+            190
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            191,
+            192,
+            193,
+            194
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 6,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            195,
+            196,
+            197,
+            198
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 199
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 200
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 201
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 202
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "12365d26",
+          "label": "10 SATs, 1st edition · Test 6",
+          "questionPages": "181–198",
+          "scoringPages": [
+            {
+              "number": 199,
+              "label": "Answer key"
+            },
+            {
+              "number": 200,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 201,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 202,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "0X",
+          "questionTextFingerprint": "cecd1e73925f67db8bfca06b52e6c5246570c7273f1bdd66182821f594508d1a"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "12365d26-test-7",
+      "title": "SAT Form 7G027",
+      "code": "Test 7",
+      "library": true,
+      "asset": "12365d26-test-7.pdf",
+      "assetSha256": "b21fd56cd460081a9c814efbebed542588bc74dcc0f78c9cf1c3a485149b29ce",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            207,
+            208,
+            209,
+            210
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            211,
+            212,
+            213,
+            214
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            215,
+            216,
+            217,
+            218,
+            219,
+            220
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            221,
+            222,
+            223,
+            224
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 225
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 226
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 227
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 228
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "12365d26",
+          "label": "10 SATs, 1st edition · Test 7",
+          "questionPages": "207–224",
+          "scoringPages": [
+            {
+              "number": 225,
+              "label": "Answer key"
+            },
+            {
+              "number": 226,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 227,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 228,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "7G027",
+          "questionTextFingerprint": "f3bbe7bb133846215ed1468fbe0450b15e93b5a2c738882b1eaccb31959f4f4f"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "12365d26-test-8",
+      "title": "SAT Form 8B210",
+      "code": "Test 8",
+      "library": true,
+      "asset": "12365d26-test-8.pdf",
+      "assetSha256": "eb9ab829d008fbfbf67c21f7a7ee99b6739c11d608f7b14e4bdc4ec6c1e4de50",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourcePages": [
+            233,
+            234,
+            235,
+            236,
+            237,
+            238
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourcePages": [
+            239,
+            240,
+            241,
+            242
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            243,
+            244,
+            245,
+            246
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            247,
+            248,
+            249,
+            250
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 251
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 252
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 253
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 254
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "12365d26",
+          "label": "10 SATs, 1st edition · Test 8",
+          "questionPages": "233–250",
+          "scoringPages": [
+            {
+              "number": 251,
+              "label": "Answer key"
+            },
+            {
+              "number": 252,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 253,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 254,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "8B210",
+          "questionTextFingerprint": "2e098845b6d46fdca14bebf5baae44406def7a44e92775bd7970242d6f2ad9da"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "12365d26-test-9",
+      "title": "SAT Form 8G071",
+      "code": "Test 9",
+      "library": true,
+      "asset": "12365d26-test-9.pdf",
+      "assetSha256": "ffbe2e4e9ea29907c7b59a1a167c4807a68cf3d3102609eb97711c1c13ee7c5e",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourcePages": [
+            259,
+            260,
+            261,
+            262,
+            263,
+            264
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourcePages": [
+            265,
+            266,
+            267,
+            268
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            269,
+            270,
+            271,
+            272
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            273,
+            274,
+            275,
+            276
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 277
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 278
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 279
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 280
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "12365d26",
+          "label": "10 SATs, 1st edition · Test 9",
+          "questionPages": "259–276",
+          "scoringPages": [
+            {
+              "number": 277,
+              "label": "Answer key"
+            },
+            {
+              "number": 278,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 279,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 280,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "8G071",
+          "questionTextFingerprint": "ed66e1be247cc7d2a73fcdc2128e9af8352a273d0ccd1c0e261d5a1a78682f72"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "12365d26-test-10",
+      "title": "SAT Form 0B023",
+      "code": "Test 10",
+      "library": true,
+      "asset": "12365d26-test-10.pdf",
+      "assetSha256": "240862201ac9eecf96fb3460c1c2700bd36a74fb32bac058900a0be288afa9e6",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourcePages": [
+            285,
+            286,
+            287,
+            288,
+            289,
+            290
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourcePages": [
+            291,
+            292,
+            293,
+            294
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            295,
+            296,
+            297,
+            298
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            299,
+            300,
+            301,
+            302
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 303
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 304
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 305
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 306
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "12365d26",
+          "label": "10 SATs, 1st edition · Test 10",
+          "questionPages": "285–302",
+          "scoringPages": [
+            {
+              "number": 303,
+              "label": "Answer key"
+            },
+            {
+              "number": 304,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 305,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 306,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "0B023",
+          "questionTextFingerprint": "364e970ab0b92969f672bece90c5ca549893d559ab98654161e9c6c9bf76832b"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_2nd-test-1",
+      "title": "SAT Form 3E · Sample Test 1",
+      "code": "Test 1",
+      "library": true,
+      "asset": "10SATs_2nd-test-1.pdf",
+      "assetSha256": "084673f6c1f0c1b29bd501ec3fbbbfb535bdddb2a925e430b36d2ba2a9c62e6e",
+      "indexes": [
+        "Verbal",
+        "Math",
+        "TSWE"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            40,
+            41,
+            42,
+            43
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            44,
+            45,
+            46,
+            47
+          ]
+        },
+        {
+          "number": 3,
+          "index": "TSWE",
+          "count": 50,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sourcePages": [
+            48,
+            49,
+            50,
+            51,
+            52
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "sourcePages": [
+            53,
+            54,
+            55,
+            56,
+            57,
+            58
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            20,
+            21,
+            22,
+            23
+          ],
+          "sourcePages": [
+            59,
+            60,
+            61,
+            62
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 24,
+          "label": "Scoring instructions",
+          "originalPage": 63
+        },
+        {
+          "source": "paper",
+          "number": 25,
+          "label": "Scoring worksheet",
+          "originalPage": 64
+        },
+        {
+          "source": "paper",
+          "number": 26,
+          "label": "Answer key",
+          "originalPage": 65
+        },
+        {
+          "source": "paper",
+          "number": 27,
+          "label": "Raw-to-scaled table",
+          "originalPage": 66
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_2nd",
+          "label": "10 SATs, 2nd edition · Test 1",
+          "questionPages": "40–62",
+          "scoringPages": [
+            {
+              "number": 63,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 64,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 65,
+              "label": "Answer key"
+            },
+            {
+              "number": 66,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": null,
+          "questionTextFingerprint": "31022bea77ef76f0c0c9b345be553b27e275a6f75d4b0a34526757ee2ad4caa1"
+        },
+        {
+          "sourceId": "12365d26",
+          "label": "10 SATs, 1st edition · Test 3",
+          "questionPages": "103–120",
+          "scoringPages": [
+            {
+              "number": 121,
+              "label": "Answer key"
+            },
+            {
+              "number": 122,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 123,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 124,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "3E",
+          "questionTextFingerprint": "7200e1e873c125bfe51d30e97d9a8c74824df55c6e30be0e0039851bca916a97"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_2nd-test-2",
+      "title": "SAT Form 1Y",
+      "code": "Test 2",
+      "library": true,
+      "asset": "10SATs_2nd-test-2.pdf",
+      "assetSha256": "89ef53636515d0a2c6753ff6682b51945f23816005f6c782ef292ef64c489738",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            77,
+            78,
+            79,
+            80
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            81,
+            82,
+            83,
+            84
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            85,
+            86,
+            87,
+            88,
+            89,
+            90
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            91,
+            92,
+            93,
+            94
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 95
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 96
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 97
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 98
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_2nd",
+          "label": "10 SATs, 2nd edition · Test 2",
+          "questionPages": "77–94",
+          "scoringPages": [
+            {
+              "number": 95,
+              "label": "Answer key"
+            },
+            {
+              "number": 96,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 97,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 98,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "1Y",
+          "questionTextFingerprint": "92e53219846201b172a5ea62aae7163341509099207654ae72424a4746b6ca97"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_2nd-test-3",
+      "title": "SAT Form 1E",
+      "code": "Test 3",
+      "library": true,
+      "asset": "10SATs_2nd-test-3.pdf",
+      "assetSha256": "a69d961a26c78495a197ce746cadf039f96ba706aa86aae6459c34364d136ffa",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            103,
+            104,
+            105,
+            106
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            107,
+            108,
+            109,
+            110
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            111,
+            112,
+            113,
+            114,
+            115,
+            116
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            117,
+            118,
+            119,
+            120
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 121
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 122
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 123
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 124
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_2nd",
+          "label": "10 SATs, 2nd edition · Test 3",
+          "questionPages": "103–120",
+          "scoringPages": [
+            {
+              "number": 121,
+              "label": "Answer key"
+            },
+            {
+              "number": 122,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 123,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 124,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "1E",
+          "questionTextFingerprint": "40cde4b51fda8687ff825cb3ca5ceaeb0ffa8a1b8901930925ae71e23e32c53a"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_2nd-test-4",
+      "title": "SAT Form 1F",
+      "code": "Test 4",
+      "library": true,
+      "asset": "10SATs_2nd-test-4.pdf",
+      "assetSha256": "c6fa4c1b5d23a7faab9f57d154ff9b2714f64500608b35de8dc425710745dec2",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            129,
+            130,
+            131,
+            132
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            133,
+            134,
+            135,
+            136
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            137,
+            138,
+            139,
+            140,
+            141,
+            142
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            143,
+            144,
+            145,
+            146
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 147
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 148
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 149
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 150
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_2nd",
+          "label": "10 SATs, 2nd edition · Test 4",
+          "questionPages": "129–146",
+          "scoringPages": [
+            {
+              "number": 147,
+              "label": "Answer key"
+            },
+            {
+              "number": 148,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 149,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 150,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "1F",
+          "questionTextFingerprint": "91876174b3cc9b3ca46a114eb1dc6b7b4d070d6b49743b3db2881de07c7945b0"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_2nd-test-5",
+      "title": "SAT Form 2E",
+      "code": "Test 5",
+      "library": true,
+      "asset": "10SATs_2nd-test-5.pdf",
+      "assetSha256": "d9d502ad26a3f04c34c7ab8b297fb8164493e52e5a8fcb0e8f79f8f2149b3479",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            155,
+            156,
+            157,
+            158
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            159,
+            160,
+            161,
+            162
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            163,
+            164,
+            165,
+            166,
+            167,
+            168
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            169,
+            170,
+            171,
+            172
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 173
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 174
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 175
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 176
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_2nd",
+          "label": "10 SATs, 2nd edition · Test 5",
+          "questionPages": "155–172",
+          "scoringPages": [
+            {
+              "number": 173,
+              "label": "Answer key"
+            },
+            {
+              "number": 174,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 175,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 176,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "2E",
+          "questionTextFingerprint": "cc0a6ebe278015091fc2d7d3de1da970a0cb9ef8618ab44bccd20177eb15edfb"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_2nd-test-6",
+      "title": "SAT Form 2F",
+      "code": "Test 6",
+      "library": true,
+      "asset": "10SATs_2nd-test-6.pdf",
+      "assetSha256": "2d3b91e3551b21aeb2868bf4afe07e4bf049bc2565675a70663bc6debbac6ae4",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourcePages": [
+            181,
+            182,
+            183,
+            184,
+            185,
+            186
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourcePages": [
+            187,
+            188,
+            189,
+            190
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            191,
+            192,
+            193,
+            194
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 6,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            195,
+            196,
+            197,
+            198
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 199
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 200
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 201
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 202
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_2nd",
+          "label": "10 SATs, 2nd edition · Test 6",
+          "questionPages": "181–198",
+          "scoringPages": [
+            {
+              "number": 199,
+              "label": "Answer key"
+            },
+            {
+              "number": 200,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 201,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 202,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "2F",
+          "questionTextFingerprint": "27bb626e46982c098c80bc7df65e504aee0795ec73a7e2ede1ae54de64252a20"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_2nd-test-7",
+      "title": "SAT Form 2Y",
+      "code": "Test 7",
+      "library": true,
+      "asset": "10SATs_2nd-test-7.pdf",
+      "assetSha256": "75fcef71c42d90cbde787897cf91d217d24ce28667d0c8c71f8978e7d1134bf7",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            207,
+            208,
+            209,
+            210
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            211,
+            212,
+            213,
+            214
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            215,
+            216,
+            217,
+            218,
+            219,
+            220
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            221,
+            222,
+            223,
+            224
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 225
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 226
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 227
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 228
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_2nd",
+          "label": "10 SATs, 2nd edition · Test 7",
+          "questionPages": "207–224",
+          "scoringPages": [
+            {
+              "number": 225,
+              "label": "Answer key"
+            },
+            {
+              "number": 226,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 227,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 228,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "2Y",
+          "questionTextFingerprint": "5ad00c57b4844e05396fbc7401ac03d7f6f722d23dc4ae3716e41bc415f4a8c8"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_2nd-test-8",
+      "title": "SAT Form 3H",
+      "code": "Test 8",
+      "library": true,
+      "asset": "10SATs_2nd-test-8.pdf",
+      "assetSha256": "1511f191650758bb00fa98499da5f6d4eb3db0a1f602a1896362317e9c1f02d1",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            233,
+            234,
+            235,
+            236
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            237,
+            238,
+            239,
+            240
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            241,
+            242,
+            243,
+            244,
+            245,
+            246
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            247,
+            248,
+            249,
+            250
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 251
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 252
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 253
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 254
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_2nd",
+          "label": "10 SATs, 2nd edition · Test 8",
+          "questionPages": "233–250",
+          "scoringPages": [
+            {
+              "number": 251,
+              "label": "Answer key"
+            },
+            {
+              "number": 252,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 253,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 254,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "3H",
+          "questionTextFingerprint": "a7701cf117d673310d62264e174755cb493285e266fb6d18a765869d68529559"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_2nd-test-9",
+      "title": "SAT Form 4E / 4V",
+      "code": "Test 9",
+      "library": true,
+      "asset": "10SATs_2nd-test-9.pdf",
+      "assetSha256": "fb6d8cd4d432ea07ed3becc6262020ba88aaf301c3eecd91ec8b7f7ca7ccdd07",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            259,
+            260,
+            261,
+            262
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            263,
+            264,
+            265,
+            266
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            267,
+            268,
+            269,
+            270,
+            271,
+            272
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            273,
+            274,
+            275,
+            276
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 277
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 278
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 279
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 280
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_2nd",
+          "label": "10 SATs, 2nd edition · Test 9",
+          "questionPages": "259–276",
+          "scoringPages": [
+            {
+              "number": 277,
+              "label": "Answer key"
+            },
+            {
+              "number": 278,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 279,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 280,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "4E / 4V",
+          "questionTextFingerprint": "539e50747d0641e2d0d5ea211286d5a334465bc3ee2eb6008f6494855b963b0b"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_2nd-test-10",
+      "title": "SAT Form 4X",
+      "code": "Test 10",
+      "library": true,
+      "asset": "10SATs_2nd-test-10.pdf",
+      "assetSha256": "37e79702849a1b996eab0028c5724a7e6a756b64f8ca4efe4ea22ef10956e489",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            285,
+            286,
+            287,
+            288
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            289,
+            290,
+            291,
+            292
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            293,
+            294,
+            295,
+            296,
+            297,
+            298
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            299,
+            300,
+            301,
+            302
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 303
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 304
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 305
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 306
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_2nd",
+          "label": "10 SATs, 2nd edition · Test 10",
+          "questionPages": "285–302",
+          "scoringPages": [
+            {
+              "number": 303,
+              "label": "Answer key"
+            },
+            {
+              "number": 304,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 305,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 306,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "4X",
+          "questionTextFingerprint": "49f4b123ca95a9ad159049256ac9e1af91bc00d41988c46ef597408aec4303d7"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_3rd-test-1",
+      "title": "SAT Form 7C",
+      "code": "Test 1",
+      "library": true,
+      "asset": "10SATs_3rd-test-1.pdf",
+      "assetSha256": "7977af7a5473cf498a4df80e244598ba37c8775e58648905dc8e2b2ae7974d7d",
+      "indexes": [
+        "Verbal",
+        "Math",
+        "TSWE"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "sourcePages": [
+            40,
+            41,
+            42,
+            43,
+            44
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourcePages": [
+            45,
+            46,
+            47,
+            48,
+            49
+          ]
+        },
+        {
+          "number": 3,
+          "index": "TSWE",
+          "count": 50,
+          "pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sourcePages": [
+            50,
+            51,
+            52,
+            53,
+            54
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "sourcePages": [
+            55,
+            56,
+            57,
+            58,
+            59,
+            60
+          ]
+        },
+        {
+          "number": 6,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ],
+          "sourcePages": [
+            61,
+            62,
+            63,
+            64,
+            65,
+            66
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 28,
+          "label": "Scoring instructions",
+          "originalPage": 67
+        },
+        {
+          "source": "paper",
+          "number": 29,
+          "label": "Scoring worksheet",
+          "originalPage": 68
+        },
+        {
+          "source": "paper",
+          "number": 30,
+          "label": "Answer key",
+          "originalPage": 69
+        },
+        {
+          "source": "paper",
+          "number": 31,
+          "label": "Raw-to-scaled table",
+          "originalPage": 70
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_3rd",
+          "label": "10 SATs, 3rd edition · Test 1",
+          "questionPages": "40–66",
+          "scoringPages": [
+            {
+              "number": 67,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 68,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 69,
+              "label": "Answer key"
+            },
+            {
+              "number": 70,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "7C",
+          "questionTextFingerprint": "764d7cf478e796f7b70ab6cd06449bcc7da4a21716c2caaa626ded2b24841c37"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_3rd-test-2",
+      "title": "SAT Form 0Y",
+      "code": "Test 2",
+      "library": true,
+      "asset": "10SATs_3rd-test-2.pdf",
+      "assetSha256": "d676922c6e25a52b8c5d45cf727367207d2d4526f0502be540b267a72580fa41",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            79,
+            80,
+            81,
+            82
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            83,
+            84,
+            85,
+            86
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            87,
+            88,
+            89,
+            90,
+            91,
+            92
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            93,
+            94,
+            95,
+            96
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 97
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 98
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 99
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 100
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_3rd",
+          "label": "10 SATs, 3rd edition · Test 2",
+          "questionPages": "79–96",
+          "scoringPages": [
+            {
+              "number": 97,
+              "label": "Answer key"
+            },
+            {
+              "number": 98,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 99,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 100,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "0Y",
+          "questionTextFingerprint": "3a2b50dd350aec76af642dbad17503289fc4000da7aab8275068973d76b3545d"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_3rd-test-3",
+      "title": "SAT Form 0Z",
+      "code": "Test 3",
+      "library": true,
+      "asset": "10SATs_3rd-test-3.pdf",
+      "assetSha256": "19c4b1882afd5c6426630c9117d209cfff3b0f9a26c2aa878417e78e7ac6b624",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            103,
+            104,
+            105,
+            106
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            107,
+            108,
+            109,
+            110
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            111,
+            112,
+            113,
+            114,
+            115,
+            116
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            117,
+            118,
+            119,
+            120
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 121
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 122
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 123
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 124
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_3rd",
+          "label": "10 SATs, 3rd edition · Test 3",
+          "questionPages": "103–120",
+          "scoringPages": [
+            {
+              "number": 121,
+              "label": "Answer key"
+            },
+            {
+              "number": 122,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 123,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 124,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "0Z",
+          "questionTextFingerprint": "47cb8309711a5130a20d90fbf38699d65ca9336a2f124e9dc2ec595d27fe3ec6"
+        },
+        {
+          "sourceId": "2d1c0995",
+          "label": "Standalone scan 2d1c0995",
+          "questionPages": "3–20",
+          "scoringPages": [
+            {
+              "number": 21,
+              "label": "Answer key"
+            },
+            {
+              "number": 22,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 23,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "0Z",
+          "questionTextFingerprint": "edc9c0afee904657d3f9fb8e4f8f34196d72040ef3dea60c30d53e8e481c64e3"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_3rd-test-4",
+      "title": "SAT Form 1Z",
+      "code": "Test 4",
+      "library": true,
+      "asset": "10SATs_3rd-test-4.pdf",
+      "assetSha256": "aa6776a1c5670fbf4b78b2d6c6b49d0b3894344449f341aafa6d5252175077fa",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "sourcePages": [
+            127,
+            128,
+            129,
+            130,
+            131
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "sourcePages": [
+            132,
+            133,
+            134,
+            135
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "sourcePages": [
+            136,
+            137,
+            138,
+            139
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 6,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "sourcePages": [
+            140,
+            141,
+            142,
+            143
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 18,
+          "label": "Answer key",
+          "originalPage": 145
+        },
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Scoring instructions",
+          "originalPage": 146
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring worksheet",
+          "originalPage": 147
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Raw-to-scaled table",
+          "originalPage": 148
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_3rd",
+          "label": "10 SATs, 3rd edition · Test 4",
+          "questionPages": "127–143",
+          "scoringPages": [
+            {
+              "number": 145,
+              "label": "Answer key"
+            },
+            {
+              "number": 146,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 147,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 148,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "1Z",
+          "questionTextFingerprint": "099b8c0519a659e417bb1afb9c412c53571311f54a44575fd4e9ac4ad134a0a7"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_3rd-test-5",
+      "title": "SAT Form 1S",
+      "code": "Test 5",
+      "library": true,
+      "asset": "10SATs_3rd-test-5.pdf",
+      "assetSha256": "60c08b9dc8b5873a98b38bd07d481f7118a8cf2a7245c3c9791a146a9a8c2d14",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            151,
+            152,
+            153,
+            154
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            155,
+            156,
+            157,
+            158
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            159,
+            160,
+            161,
+            162,
+            163,
+            164
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            165,
+            166,
+            167,
+            168
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 169
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 170
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 171
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 172
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_3rd",
+          "label": "10 SATs, 3rd edition · Test 5",
+          "questionPages": "151–168",
+          "scoringPages": [
+            {
+              "number": 169,
+              "label": "Answer key"
+            },
+            {
+              "number": 170,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 171,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 172,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "1S",
+          "questionTextFingerprint": "8ab16bc287d6a764379141f2c5b78898760af06e7884066ed94bb36a3ba54e52"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_3rd-test-6",
+      "title": "SAT Form 3I",
+      "code": "Test 6",
+      "library": true,
+      "asset": "10SATs_3rd-test-6.pdf",
+      "assetSha256": "90e220c79b7309619536487ec59dacb2bc94f2d4c9bd12dcc4b565803ee75e47",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            175,
+            176,
+            177,
+            178
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            179,
+            180,
+            181,
+            182
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            183,
+            184,
+            185,
+            186,
+            187,
+            188
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            189,
+            190,
+            191,
+            192
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 193
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 194
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 195
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 196
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_3rd",
+          "label": "10 SATs, 3rd edition · Test 6",
+          "questionPages": "175–192",
+          "scoringPages": [
+            {
+              "number": 193,
+              "label": "Answer key"
+            },
+            {
+              "number": 194,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 195,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 196,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "3I",
+          "questionTextFingerprint": "870aa66234a6ca7652b96a1eefc992794044bf58ce789fcfb4ce15f8828b1492"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_3rd-test-7",
+      "title": "SAT Form 4W",
+      "code": "Test 7",
+      "library": true,
+      "asset": "10SATs_3rd-test-7.pdf",
+      "assetSha256": "31df519ed101bafe79b0c8eb6c2bb225cc43795c33635a0a1e9a66c23b4d2309",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            199,
+            200,
+            201,
+            202
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            203,
+            204,
+            205,
+            206
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            207,
+            208,
+            209,
+            210,
+            211,
+            212
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            213,
+            214,
+            215,
+            216
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 217
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 218
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 219
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 220
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_3rd",
+          "label": "10 SATs, 3rd edition · Test 7",
+          "questionPages": "199–216",
+          "scoringPages": [
+            {
+              "number": 217,
+              "label": "Answer key"
+            },
+            {
+              "number": 218,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 219,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 220,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "4W",
+          "questionTextFingerprint": "671502d2ebad2acd2eef34e89ad1451e72795574d7df1ac0f0f6e6bf966c5f39"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_3rd-test-8",
+      "title": "SAT Form 5H",
+      "code": "Test 8",
+      "library": true,
+      "asset": "10SATs_3rd-test-8.pdf",
+      "assetSha256": "ad953df72a99416b387933f719555f35db34a5f48a616c7045ebb24b749b93cf",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            223,
+            224,
+            225,
+            226
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            227,
+            228,
+            229,
+            230
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            231,
+            232,
+            233,
+            234,
+            235,
+            236
+          ]
+        },
+        {
+          "number": 6,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            237,
+            238,
+            239,
+            240
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 241
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 242
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 243
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 244
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_3rd",
+          "label": "10 SATs, 3rd edition · Test 8",
+          "questionPages": "223–240",
+          "scoringPages": [
+            {
+              "number": 241,
+              "label": "Answer key"
+            },
+            {
+              "number": 242,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 243,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 244,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "5H",
+          "questionTextFingerprint": "f069cad9734054994289b3ad908adcac183c3fe2ef0256c5cb8f2fb32d66bd5d"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_3rd-test-9",
+      "title": "SAT Form 6E",
+      "code": "Test 9",
+      "library": true,
+      "asset": "10SATs_3rd-test-9.pdf",
+      "assetSha256": "de5e482ed9376c71171265db3acfb90a82f9d7bfe45b3c7fd9cdc0736092ea3a",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourcePages": [
+            247,
+            248,
+            249,
+            250,
+            251,
+            252
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourcePages": [
+            253,
+            254,
+            255,
+            256,
+            257,
+            258
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "sourcePages": [
+            259,
+            260,
+            261,
+            262,
+            263
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "sourcePages": [
+            264,
+            265,
+            266,
+            267
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Answer key",
+          "originalPage": 269
+        },
+        {
+          "source": "paper",
+          "number": 23,
+          "label": "Scoring instructions",
+          "originalPage": 270
+        },
+        {
+          "source": "paper",
+          "number": 24,
+          "label": "Scoring worksheet",
+          "originalPage": 271
+        },
+        {
+          "source": "paper",
+          "number": 25,
+          "label": "Raw-to-scaled table",
+          "originalPage": 272
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_3rd",
+          "label": "10 SATs, 3rd edition · Test 9",
+          "questionPages": "247–267",
+          "scoringPages": [
+            {
+              "number": 269,
+              "label": "Answer key"
+            },
+            {
+              "number": 270,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 271,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 272,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "6E",
+          "questionTextFingerprint": "e9ca3376b76ee3d64aff519fd0fb8155d84af9c97b4d6b34837822a16827911f"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "10SATs_3rd-test-10",
+      "title": "SAT Form 6G",
+      "code": "Test 10",
+      "library": true,
+      "asset": "10SATs_3rd-test-10.pdf",
+      "assetSha256": "d2e79445b49fd55cd48d28b59e1eaf942b44070cdc1f3ec94000267b9240e12c",
+      "indexes": [
+        "Math",
+        "Verbal"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            275,
+            276,
+            277,
+            278
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourcePages": [
+            279,
+            280,
+            281,
+            282,
+            283,
+            284
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sourcePages": [
+            285,
+            286,
+            287,
+            288,
+            289
+          ]
+        },
+        {
+          "number": 6,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "sourcePages": [
+            290,
+            291,
+            292,
+            293,
+            294,
+            295
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Answer key",
+          "originalPage": 297
+        },
+        {
+          "source": "paper",
+          "number": 23,
+          "label": "Scoring instructions",
+          "originalPage": 298
+        },
+        {
+          "source": "paper",
+          "number": 24,
+          "label": "Scoring worksheet",
+          "originalPage": 299
+        },
+        {
+          "source": "paper",
+          "number": 25,
+          "label": "Raw-to-scaled table",
+          "originalPage": 300
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "10SATs_3rd",
+          "label": "10 SATs, 3rd edition · Test 10",
+          "questionPages": "275–295",
+          "scoringPages": [
+            {
+              "number": 297,
+              "label": "Answer key"
+            },
+            {
+              "number": 298,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 299,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 300,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "6G",
+          "questionTextFingerprint": "9d820672e3ad27a094a97526f92d0685b2c992b53c1a8c1ecfebbb9422d19a27"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "012a3140",
+      "title": "SAT Form 6K",
+      "code": "Standalone",
+      "library": true,
+      "asset": "012a3140.pdf",
+      "assetSha256": "041c5155bdd09eea8195a68b59652bb6685dde577a5df04960ff54c9c769573f",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourcePages": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "sourcePages": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 25,
+          "label": "Answer key",
+          "originalPage": 25
+        },
+        {
+          "source": "paper",
+          "number": 26,
+          "label": "Scoring instructions",
+          "originalPage": 26
+        },
+        {
+          "source": "paper",
+          "number": 27,
+          "label": "Scoring worksheet",
+          "originalPage": 27
+        },
+        {
+          "source": "paper",
+          "number": 28,
+          "label": "Raw-to-scaled table",
+          "originalPage": 28
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "012a3140",
+          "label": "Standalone scan 012a3140",
+          "questionPages": "1–24",
+          "scoringPages": [
+            {
+              "number": 25,
+              "label": "Answer key"
+            },
+            {
+              "number": 26,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 27,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 28,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "6K",
+          "questionTextFingerprint": "62e8bdbce389a30581c2a5f1af341d2123006679bba69fb3b541f6f701020554"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "09451a48",
+      "title": "SAT Form 4I",
+      "code": "Standalone",
+      "library": true,
+      "asset": "09451a48.pdf",
+      "assetSha256": "d63d174ab1602326aa87163a74e7d83e8ad4e70f19814ad54a5fbed41b06dec9",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourcePages": [
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 6,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            15,
+            16,
+            17,
+            18
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 19
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 20
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 21
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 22
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "09451a48",
+          "label": "Standalone scan 09451a48",
+          "questionPages": "1–18",
+          "scoringPages": [
+            {
+              "number": 19,
+              "label": "Answer key"
+            },
+            {
+              "number": 20,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 21,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 22,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "4I",
+          "questionTextFingerprint": "32c3dee1dca0e32c2065cc4490165cfc04735f53b1021298df5a6b6dbe495c31"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "151e61b7",
+      "title": "SAT Form 5E",
+      "code": "Standalone",
+      "library": true,
+      "asset": "151e61b7.pdf",
+      "assetSha256": "ea1349d0458da549e3c10300ed41adcbed592abba4d2d1416b8c2fd3ee4352f8",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourcePages": [
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 6,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            15,
+            16,
+            17,
+            18
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 19
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 20
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 21
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 22
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "151e61b7",
+          "label": "Standalone scan 151e61b7",
+          "questionPages": "1–18",
+          "scoringPages": [
+            {
+              "number": 19,
+              "label": "Answer key"
+            },
+            {
+              "number": 20,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 21,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 22,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "5E",
+          "questionTextFingerprint": "4d710d5a1a011c6f05319360e5773e8794b017d4a0c3d856de00d941dd2ae126"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "44c1853d",
+      "title": "SAT Form 5X",
+      "code": "Standalone",
+      "library": true,
+      "asset": "44c1853d.pdf",
+      "assetSha256": "8c989d587b73876a48891a70fe1c8a985e583906163a88bb78781e57eb7e70e2",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "number": 3,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourcePages": [
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 6,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            15,
+            16,
+            17,
+            18
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 19
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 20
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 21
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 22
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "44c1853d",
+          "label": "Standalone scan 44c1853d",
+          "questionPages": "1–18",
+          "scoringPages": [
+            {
+              "number": 19,
+              "label": "Answer key"
+            },
+            {
+              "number": 20,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 21,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 22,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "5X",
+          "questionTextFingerprint": "03c04c99a5b8b020277f26f60fe8665d76b867519bb8b0e1356b893124319bf9"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "9ab02bc9",
+      "title": "SAT Form 5D",
+      "code": "Standalone",
+      "library": true,
+      "asset": "9ab02bc9.pdf",
+      "assetSha256": "886e7d5dd5e67f68c432db5efb9ddebdeb58d8980937dacff1a996b499b548cd",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sourcePages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 19
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Scoring instructions",
+          "originalPage": 20
+        },
+        {
+          "source": "paper",
+          "number": 21,
+          "label": "Scoring worksheet",
+          "originalPage": 21
+        },
+        {
+          "source": "paper",
+          "number": 22,
+          "label": "Raw-to-scaled table",
+          "originalPage": 22
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "9ab02bc9",
+          "label": "Standalone scan 9ab02bc9",
+          "questionPages": "1–18",
+          "scoringPages": [
+            {
+              "number": 19,
+              "label": "Answer key"
+            },
+            {
+              "number": 20,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 21,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 22,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "5D",
+          "questionTextFingerprint": "a3567b7b69a64cc8fbdfdf1ae87ae8a542af954640e87379a3f2a8fd26adda85"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    },
+    {
+      "id": "eed9ccf8",
+      "title": "SAT Form 7A",
+      "code": "Standalone",
+      "library": true,
+      "asset": "eed9ccf8.pdf",
+      "assetSha256": "4475d9d61cd350e71851a8f9dd798903d86c2dcae33ae0816fa814c2fd6c4fd3",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourcePages": [
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "sourcePages": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "sourcePages": [
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 23,
+          "label": "Answer key",
+          "originalPage": 23
+        },
+        {
+          "source": "paper",
+          "number": 24,
+          "label": "Scoring instructions",
+          "originalPage": 24
+        },
+        {
+          "source": "paper",
+          "number": 25,
+          "label": "Scoring worksheet",
+          "originalPage": 25
+        },
+        {
+          "source": "paper",
+          "number": 26,
+          "label": "Raw-to-scaled table",
+          "originalPage": 26
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "eed9ccf8",
+          "label": "Standalone scan eed9ccf8",
+          "questionPages": "1–22",
+          "scoringPages": [
+            {
+              "number": 23,
+              "label": "Answer key"
+            },
+            {
+              "number": 24,
+              "label": "Scoring instructions"
+            },
+            {
+              "number": 25,
+              "label": "Scoring worksheet"
+            },
+            {
+              "number": 26,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": "7A",
+          "questionTextFingerprint": "f15b1df87c4c3c4915d26b2c0cb5e9aae88e020e31b78312dfba9b867e886f23"
+        }
+      ],
+      "scoringStatus": "reference-only"
+    }
+  ],
+  "matches": [
+    {
+      "form": "3E",
+      "evidence": "Matching four SAT sections. The 2nd-edition copy additionally includes TSWE."
+    },
+    {
+      "form": "0Z",
+      "evidence": "Matching form code, four section sequences and question text. Standalone appendices excluded."
+    }
+  ],
+  "practiceForms": [
+    {
+      "id": "042c3604",
+      "title": "Unidentified Form 1",
+      "code": "Unidentified",
+      "library": true,
+      "asset": "042c3604.pdf",
+      "assetSha256": "9e156190d5155e72c797c61e35a1fcb9f303a6e534129b24ada1f57136bf4833",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            5,
+            6,
+            7
+          ],
+          "sourcePages": [
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "number": 4,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourcePages": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "sourcePages": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 17,
+          "label": "Answer key",
+          "originalPage": 17
+        },
+        {
+          "source": "paper",
+          "number": 18,
+          "label": "Raw-to-scaled table",
+          "originalPage": 18
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "042c3604",
+          "label": "Standalone scan 042c3604",
+          "questionPages": "1–16",
+          "scoringPages": [
+            {
+              "number": 17,
+              "label": "Answer key"
+            },
+            {
+              "number": 18,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": null,
+          "questionTextFingerprint": "abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52"
+        }
+      ],
+      "scoringStatus": "user-approved-packet-scoring",
+      "practiceAudit": {
+        "assetSha256": "9e156190d5155e72c797c61e35a1fcb9f303a6e534129b24ada1f57136bf4833",
+        "transcriptionSha256": "d5d441442d993be4decb29ec5b390f5ab44b4239f6bd70a1058e80e4fc49b8e2",
+        "status": "review",
+        "scoringReady": true,
+        "unresolved": 1,
+        "transcription": {
+          "checked": 145,
+          "total": 145
+        },
+        "key": {
+          "checked": 145,
+          "total": 145
+        },
+        "scale": {
+          "checked": 147,
+          "total": 147
+        },
+        "note": "Scoring approved by the user for this specific packet. All 145 key entries and both conversion columns were read from the accompanying scoring pages. Section sequences and representative solved questions match. The historical form code and administration date remain unidentified. Historical multiple-choice deductions are used, with the requested blank-answer adjustment calculated separately.",
+        "scoringVersion": "042c3604-approved-1",
+        "scoringSha256": "a777d77dc570ba39a036bdf3e077ea5da56b008bb4c8ac898eec3259f6f73e04",
+        "scoringApproval": {
+          "status": "approved",
+          "approvedBy": "user",
+          "date": "2026-11-08",
+          "assetSha256": "9e156190d5155e72c797c61e35a1fcb9f303a6e534129b24ada1f57136bf4833",
+          "scoringVersion": "042c3604-approved-1",
+          "request": "Repackage it and make the 2 unidentified forms scorable using their question sheets, answer keys and scoring conversions."
+        }
+      }
+    },
+    {
+      "id": "1ba0fa17",
+      "title": "Unidentified Form 2",
+      "code": "Unidentified",
+      "library": true,
+      "asset": "1ba0fa17.pdf",
+      "assetSha256": "c0fc3c526dfaeb91d5746d05fe6c9f14efaaeef56ff6d71d5fe8aed34dae2b69",
+      "indexes": [
+        "Verbal",
+        "Math"
+      ],
+      "sections": [
+        {
+          "number": 1,
+          "index": "Verbal",
+          "count": 45,
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourcePages": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "number": 2,
+          "index": "Math",
+          "count": 35,
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "sourcePages": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "fourChoice": [
+            8,
+            27
+          ]
+        },
+        {
+          "number": 5,
+          "index": "Math",
+          "count": 25,
+          "pages": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourcePages": [
+            11,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "number": 6,
+          "index": "Verbal",
+          "count": 40,
+          "pages": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "sourcePages": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      ],
+      "paperPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "scoringPages": [
+        {
+          "source": "paper",
+          "number": 19,
+          "label": "Answer key",
+          "originalPage": 21
+        },
+        {
+          "source": "paper",
+          "number": 20,
+          "label": "Raw-to-scaled table",
+          "originalPage": 22
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "1ba0fa17",
+          "label": "Standalone scan 1ba0fa17",
+          "questionPages": "3–20",
+          "scoringPages": [
+            {
+              "number": 21,
+              "label": "Answer key"
+            },
+            {
+              "number": 22,
+              "label": "Raw-to-scaled table"
+            }
+          ],
+          "formCode": null,
+          "questionTextFingerprint": "ab9f3e5c71b96d0ca434851ecacc97b0fc3a0e8d96ab171916e9d5fdd10ef15b"
+        }
+      ],
+      "scoringStatus": "user-approved-packet-scoring",
+      "practiceAudit": {
+        "assetSha256": "c0fc3c526dfaeb91d5746d05fe6c9f14efaaeef56ff6d71d5fe8aed34dae2b69",
+        "transcriptionSha256": "1cb34129d152becde3c5a4b003df42ed20340f80181d4fcd0a3151787d715c4b",
+        "status": "review",
+        "scoringReady": true,
+        "unresolved": 1,
+        "transcription": {
+          "checked": 145,
+          "total": 145
+        },
+        "key": {
+          "checked": 145,
+          "total": 145
+        },
+        "scale": {
+          "checked": 159,
+          "total": 159
+        },
+        "note": "Scoring approved by the user for this specific packet. All 145 key entries and both conversion columns were read from the accompanying scoring pages. Section sequences and representative solved questions match. The historical form code and administration date remain unidentified. Historical multiple-choice deductions are used, with the requested blank-answer adjustment calculated separately.",
+        "scoringVersion": "1ba0fa17-approved-1",
+        "scoringSha256": "a9f0ab0261ff9c4e33055e50fdb5f0455411804bac7b7067e762788d8a9e7ee9",
+        "scoringApproval": {
+          "status": "approved",
+          "approvedBy": "user",
+          "date": "2026-11-08",
+          "assetSha256": "c0fc3c526dfaeb91d5746d05fe6c9f14efaaeef56ff6d71d5fe8aed34dae2b69",
+          "scoringVersion": "1ba0fa17-approved-1",
+          "request": "Repackage it and make the 2 unidentified forms scorable using their question sheets, answer keys and scoring conversions."
+        }
+      }
+    }
+  ]
+}

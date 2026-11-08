@@ -1,11 +1,15 @@
 import { getDocument, GlobalWorkerOptions } from "pdfjs-dist";
 import worker from "pdfjs-dist/build/pdf.worker.min.mjs?url";
+const bundledDecoders = import.meta.glob("../node_modules/pdfjs-dist/wasm/*_nowasm_fallback.js", {
+  eager: true, query: "?url&no-inline", import: "default",
+});
 
 GlobalWorkerOptions.workerSrc = worker;
 
-export function openPdf(file) {
+export function openPdf(file, historical = false) {
   const task = file.arrayBuffer().then((data) => getDocument({
     data, isEvalSupported: false, useWasm: false, useSystemFonts: true,
+    wasmUrl: historical ? new URL(".", new URL(Object.values(bundledDecoders)[0], location.href)).href : undefined,
   }));
   return { document: task.then((loader) => loader.promise), close: () => task.then((loader) => loader.destroy()).catch(() => {}) };
 }

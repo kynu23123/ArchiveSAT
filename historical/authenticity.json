@@ -1,0 +1,1128 @@
+{
+  "excluded": [
+    {
+      "id": "7W",
+      "sha256": "19887b8ba2dcdc316361fa436d0d7d1294b5d64a686aebb3f975cd564234a8d2",
+      "reason": "The supplied packet has duplicate pages and missing questions."
+    }
+  ],
+  "forms": {
+    "12365d26-test-1": {
+      "status": "verified",
+      "assetSha256": "301c96a5de3a1463545eacbbf742102dbd5ae74076ad194173b88f173a82ac48",
+      "transcriptionSha256": "22842555d888ce85fccb5c762a942c2958307f7da308c62ce8a2389be7006235",
+      "scoringSha256": "1a4bd22c2104b058fe53f601389ebed14440659aaa28d1e874ffc22051e7d9ef",
+      "scoringVersion": "12365d26-test-1-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 159,
+        "total": 159
+      },
+      "period": {
+        "sourceSha256": "1dbae2c48516632b5a92083ff6f056c50de62fa9ef2dd5c72cf468b540575ea7",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1983
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "12365d26-test-2": {
+      "status": "verified",
+      "assetSha256": "1db48db8e210b455f5e3c83f3505e4d465f02b9e4d60b817a6c6a03ee5d0c238",
+      "transcriptionSha256": "46c5320d8c634fc9fa1c0bc21315b692e84ed09f847569015836e30e12d5ecc4",
+      "scoringSha256": "14f1bb93ee767d25e1b99797d7dfecc33d388364b7020932e10a1347d1d70d98",
+      "scoringVersion": "12365d26-test-2-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 167,
+        "total": 167
+      },
+      "period": {
+        "sourceSha256": "1dbae2c48516632b5a92083ff6f056c50de62fa9ef2dd5c72cf468b540575ea7",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1983
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "12365d26-test-4": {
+      "status": "verified",
+      "assetSha256": "40a7e5f7fb984fc845caf9a939f6ee2d5db184476b511f9f332e179de572db7e",
+      "transcriptionSha256": "05ab2e7e374d1c4518b8e69af26418687d8608dfa9e53515f978e6c85d1787b2",
+      "scoringSha256": "4c8dbc5e10b83cfc1be02a43476a931d172ebfbfe86709a24b00a5dbf791dffc",
+      "scoringVersion": "12365d26-test-4-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 159,
+        "total": 159
+      },
+      "period": {
+        "sourceSha256": "1dbae2c48516632b5a92083ff6f056c50de62fa9ef2dd5c72cf468b540575ea7",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1983
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "12365d26-test-5": {
+      "status": "verified",
+      "assetSha256": "e7c164d5c064579fe22ff4610700e0691cc0a572012610c5ca4f2a4d6a5e5ea1",
+      "transcriptionSha256": "31517869d3ad4745ac188e7b0aa182d74b8f3b76bcb9445ca26adfba437ada9d",
+      "scoringSha256": "7d89f32bf36887f72d4399484a554c05e2d8844e7f212b9d0273fdd63a6f90a2",
+      "scoringVersion": "12365d26-test-5-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 159,
+        "total": 159
+      },
+      "period": {
+        "sourceSha256": "1dbae2c48516632b5a92083ff6f056c50de62fa9ef2dd5c72cf468b540575ea7",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1983
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "12365d26-test-6": {
+      "status": "verified",
+      "assetSha256": "f3ef550e2fc83298e723a1f36ac2ee7821a1c63b7f83a569ca06c10484530ec2",
+      "transcriptionSha256": "3c0ef491901c30e8a5fbd218cd45be19947769aeb07c0e838c70ab297e5ff7d4",
+      "scoringSha256": "33a4ff3b9594c06c5feb5a40d4ba946f984159f49bc6fa30c676e7eea988893d",
+      "scoringVersion": "12365d26-test-6-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 161,
+        "total": 161
+      },
+      "period": {
+        "sourceSha256": "1dbae2c48516632b5a92083ff6f056c50de62fa9ef2dd5c72cf468b540575ea7",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1983
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "12365d26-test-7": {
+      "status": "verified",
+      "assetSha256": "b21fd56cd460081a9c814efbebed542588bc74dcc0f78c9cf1c3a485149b29ce",
+      "transcriptionSha256": "f3b2d484bc83345f5dc21d7b9f2c9e44b60e02e997c70a008b34060d0e84fa27",
+      "scoringSha256": "d28a3d7989ec35669f1b40234e5d9cb80c8c4733c73123db1e1aef144a07be0c",
+      "scoringVersion": "12365d26-test-7-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 161,
+        "total": 161
+      },
+      "period": {
+        "sourceSha256": "1dbae2c48516632b5a92083ff6f056c50de62fa9ef2dd5c72cf468b540575ea7",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1983
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "12365d26-test-8": {
+      "status": "verified",
+      "assetSha256": "eb9ab829d008fbfbf67c21f7a7ee99b6739c11d608f7b14e4bdc4ec6c1e4de50",
+      "transcriptionSha256": "2cb60459fe205e7a7e50b5252f88625fc29ba8e7057dc6e78187d1e45c8a7dcf",
+      "scoringSha256": "35a8d640bbec773a4b7027954ca248bb6a4b3f87ddc7d3f97464fa6f2fb86675",
+      "scoringVersion": "8B210-2",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 163,
+        "total": 163
+      },
+      "period": {
+        "sourceSha256": "1dbae2c48516632b5a92083ff6f056c50de62fa9ef2dd5c72cf468b540575ea7",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1983
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": [
+        {
+          "sourcePage": 242,
+          "choice": 2,
+          "value": "24(d+75)",
+          "source": "User correction in this conversation: answer c should be 24(d+75), and e is the correct answer according to the score sheet.",
+          "reason": "The supplied scan clips choice C; this wording is explicitly user approved. The official key E was checked independently against the printed key."
+        }
+      ]
+    },
+    "12365d26-test-9": {
+      "status": "verified",
+      "assetSha256": "ffbe2e4e9ea29907c7b59a1a167c4807a68cf3d3102609eb97711c1c13ee7c5e",
+      "transcriptionSha256": "5ad6b48250c563a27ef75f5d69a64343cb8908ab2faec4a4d07df70678d313fe",
+      "scoringSha256": "4bd5a9d626a3392a85e4dcb938201eca581fa29ecbc9220f2e8eac7eaefa3c90",
+      "scoringVersion": "12365d26-test-9-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 163,
+        "total": 163
+      },
+      "period": {
+        "sourceSha256": "1dbae2c48516632b5a92083ff6f056c50de62fa9ef2dd5c72cf468b540575ea7",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1983
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "12365d26-test-10": {
+      "status": "verified",
+      "assetSha256": "240862201ac9eecf96fb3460c1c2700bd36a74fb32bac058900a0be288afa9e6",
+      "transcriptionSha256": "c689ece05d657255a3bcdc4c9b767b50314a419d848f5dcf20d607dfe5fa47ff",
+      "scoringSha256": "5b50e781d2d77d955ff8a10fde46d5d82fd0abcb0ca22d209378b9d1515ed91d",
+      "scoringVersion": "12365d26-test-10-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 165,
+        "total": 165
+      },
+      "period": {
+        "sourceSha256": "1dbae2c48516632b5a92083ff6f056c50de62fa9ef2dd5c72cf468b540575ea7",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1983
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_2nd-test-1": {
+      "status": "verified",
+      "assetSha256": "084673f6c1f0c1b29bd501ec3fbbbfb535bdddb2a925e430b36d2ba2a9c62e6e",
+      "transcriptionSha256": "ec60bdf14ad184bbee05562d69349f584c2c88adb373a1e5e3ed6baa25a24a51",
+      "scoringSha256": "0e3f1c2c4221e4db637294716a61c607b45ab13cbac0a74a0583fa48526ec0ac",
+      "scoringVersion": "10SATs_2nd-test-1-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 163,
+        "total": 163
+      },
+      "period": {
+        "sourceSha256": "017b70c4d797c8aa4426f8b2b342d0322490386ec4baee0fb48b54793323a5c0",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1986
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_2nd-test-2": {
+      "status": "verified",
+      "assetSha256": "89ef53636515d0a2c6753ff6682b51945f23816005f6c782ef292ef64c489738",
+      "transcriptionSha256": "3dd5128714d97a9dc1c0e876a46f598174381b9574e549c4120505d2a3cc172d",
+      "scoringSha256": "a622e68d2121eed006b98753eac9a034105b1445bf43fc1c2f40952c2bafd38a",
+      "scoringVersion": "10SATs_2nd-test-2-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 161,
+        "total": 161
+      },
+      "period": {
+        "sourceSha256": "017b70c4d797c8aa4426f8b2b342d0322490386ec4baee0fb48b54793323a5c0",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1986
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_2nd-test-3": {
+      "status": "verified",
+      "assetSha256": "a69d961a26c78495a197ce746cadf039f96ba706aa86aae6459c34364d136ffa",
+      "transcriptionSha256": "c81f8644fc399eb64caa3c545819da9f0d7dd07e6d89466f199f4e8cce309b6d",
+      "scoringSha256": "2416ef15ae5f9e253c4caf752961d2f1a001f14ee8c33271cd31d4e5f9c7a52f",
+      "scoringVersion": "10SATs_2nd-test-3-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 144,
+        "total": 144
+      },
+      "key": {
+        "checked": 144,
+        "total": 144
+      },
+      "scale": {
+        "checked": 158,
+        "total": 158
+      },
+      "period": {
+        "sourceSha256": "017b70c4d797c8aa4426f8b2b342d0322490386ec4baee0fb48b54793323a5c0",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1986
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_2nd-test-4": {
+      "status": "verified",
+      "assetSha256": "c6fa4c1b5d23a7faab9f57d154ff9b2714f64500608b35de8dc425710745dec2",
+      "transcriptionSha256": "b49ae555f6f167b031a4d8bbee2e42c390c0a28d7ddd0e7e1d5c7b3ae9b9f0aa",
+      "scoringSha256": "567acf8e04d56fef9fb8d579a525f76f1bb22556153adb64bb2420b8ac24f811",
+      "scoringVersion": "10SATs_2nd-test-4-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 163,
+        "total": 163
+      },
+      "period": {
+        "sourceSha256": "017b70c4d797c8aa4426f8b2b342d0322490386ec4baee0fb48b54793323a5c0",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1986
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_2nd-test-5": {
+      "status": "verified",
+      "assetSha256": "d9d502ad26a3f04c34c7ab8b297fb8164493e52e5a8fcb0e8f79f8f2149b3479",
+      "transcriptionSha256": "d2b5d59110032fe09e88a0deacdbb2e7e6fedb1f224e241a26f0644e05f331cc",
+      "scoringSha256": "c89f60ee056dc061fcb576be8a316268f166590b12e2c6a5c7e36e16b6d13a63",
+      "scoringVersion": "10SATs_2nd-test-5-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 144,
+        "total": 144
+      },
+      "key": {
+        "checked": 144,
+        "total": 144
+      },
+      "scale": {
+        "checked": 160,
+        "total": 160
+      },
+      "period": {
+        "sourceSha256": "017b70c4d797c8aa4426f8b2b342d0322490386ec4baee0fb48b54793323a5c0",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1986
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_2nd-test-6": {
+      "status": "verified",
+      "assetSha256": "2d3b91e3551b21aeb2868bf4afe07e4bf049bc2565675a70663bc6debbac6ae4",
+      "transcriptionSha256": "dc01da2a9b4454d0c3f7eac4ba8a325ca96464ab4f57f1f82cf56afa2d2e7405",
+      "scoringSha256": "89d2442e88fb10ed2d545080b5a5b68ac0c9d68cbdff4fd427bcdfabefd7e6fe",
+      "scoringVersion": "10SATs_2nd-test-6-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 159,
+        "total": 159
+      },
+      "period": {
+        "sourceSha256": "017b70c4d797c8aa4426f8b2b342d0322490386ec4baee0fb48b54793323a5c0",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1986
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_2nd-test-7": {
+      "status": "verified",
+      "assetSha256": "75fcef71c42d90cbde787897cf91d217d24ce28667d0c8c71f8978e7d1134bf7",
+      "transcriptionSha256": "1e8b5e14ccc16546ccfcd5d3a72a8bfe3a9b8ad1ec335f100f25b07ddea985ac",
+      "scoringSha256": "2bfb257645c2e48138dff6b3330e06fef183e5c6259884653e0873c4738edecf",
+      "scoringVersion": "10SATs_2nd-test-7-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 144,
+        "total": 144
+      },
+      "key": {
+        "checked": 144,
+        "total": 144
+      },
+      "scale": {
+        "checked": 158,
+        "total": 158
+      },
+      "period": {
+        "sourceSha256": "017b70c4d797c8aa4426f8b2b342d0322490386ec4baee0fb48b54793323a5c0",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1986
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_2nd-test-8": {
+      "status": "verified",
+      "assetSha256": "1511f191650758bb00fa98499da5f6d4eb3db0a1f602a1896362317e9c1f02d1",
+      "transcriptionSha256": "13c03e9ebb011a94e5e187295832ee89087f692ec3e906d6856ed9b5ac59e54b",
+      "scoringSha256": "f2aecb10fe485e6a5afc8ce748d665401c3e2a8477d5630ccf4dc2b617caf60f",
+      "scoringVersion": "10SATs_2nd-test-8-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 159,
+        "total": 159
+      },
+      "period": {
+        "sourceSha256": "017b70c4d797c8aa4426f8b2b342d0322490386ec4baee0fb48b54793323a5c0",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1986
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": [],
+      "presentationCorrections": [
+        {
+          "date": "2026-11-08",
+          "section": 2,
+          "question": 23,
+          "excerptPage": 8,
+          "sourcePage": 240,
+          "printedPage": 238,
+          "cropPdfPoints": [
+            375,
+            40,
+            555,
+            91
+          ],
+          "diagramSha256": "d6fa2307e0dee0b2aceb4a9d6845f348fc54052b8899c49ebda30b0b3ff4abab",
+          "previousTranscriptionSha256": "1603ff742343cfd0c7d7327563e575770691ed3d541fb483a02a9ca135f48049",
+          "transcriptionSha256": "13c03e9ebb011a94e5e187295832ee89087f692ec3e906d6856ed9b5ac59e54b",
+          "reason": "Restored the original line-segment diagram with A/B/C/D labels and the not-to-scale note. Prompt and answer choices remain digital text. Answer key and scoring are unchanged."
+        }
+      ]
+    },
+    "10SATs_2nd-test-9": {
+      "status": "verified",
+      "assetSha256": "fb6d8cd4d432ea07ed3becc6262020ba88aaf301c3eecd91ec8b7f7ca7ccdd07",
+      "transcriptionSha256": "3f601c037aba88dec463e60ddeec9f8e89b392ff126fb986d6063062e65b2e8b",
+      "scoringSha256": "fe3d47514280e23b643d7b18fa9faf418c32188939a0aade0027973ce1611acf",
+      "scoringVersion": "10SATs_2nd-test-9-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 159,
+        "total": 159
+      },
+      "period": {
+        "sourceSha256": "017b70c4d797c8aa4426f8b2b342d0322490386ec4baee0fb48b54793323a5c0",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1986
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_2nd-test-10": {
+      "status": "verified",
+      "assetSha256": "37e79702849a1b996eab0028c5724a7e6a756b64f8ca4efe4ea22ef10956e489",
+      "transcriptionSha256": "aa5c0b7cf05417da8cd90380d140a63f5e403a3124e4de7be8d7f7f2cd7cfab3",
+      "scoringSha256": "41cd34f43976500c0774d8a8be14a4b1a8c959c890d41279b0ecc422e1bfc8d5",
+      "scoringVersion": "10SATs_2nd-test-10-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 159,
+        "total": 159
+      },
+      "period": {
+        "sourceSha256": "017b70c4d797c8aa4426f8b2b342d0322490386ec4baee0fb48b54793323a5c0",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1986
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_3rd-test-1": {
+      "status": "verified",
+      "assetSha256": "7977af7a5473cf498a4df80e244598ba37c8775e58648905dc8e2b2ae7974d7d",
+      "transcriptionSha256": "e67e79391a2d72409760aa18b0da1656902c2c50bfd79b568d18930cb2b421e6",
+      "scoringSha256": "2d9f6759db645804d23bafa400aac2d4107e57e750a1191d516eeffba03593b1",
+      "scoringVersion": "10SATs_3rd-test-1-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 155,
+        "total": 155
+      },
+      "period": {
+        "sourceSha256": "f865621074adbf1206934077658543df0bdf203956559c5e625c803078940205",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1988
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_3rd-test-2": {
+      "status": "verified",
+      "assetSha256": "d676922c6e25a52b8c5d45cf727367207d2d4526f0502be540b267a72580fa41",
+      "transcriptionSha256": "c5055af1adcb953d5cba38a41e28b196824c0c018b8817d2054ace949c4c16f0",
+      "scoringSha256": "cbb20e2087f2f789665f853f1ac05c99b81912bd9a99cba4916923074e87a6cb",
+      "scoringVersion": "10SATs_3rd-test-2-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 157,
+        "total": 157
+      },
+      "period": {
+        "sourceSha256": "f865621074adbf1206934077658543df0bdf203956559c5e625c803078940205",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1988
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_3rd-test-3": {
+      "status": "verified",
+      "assetSha256": "19c4b1882afd5c6426630c9117d209cfff3b0f9a26c2aa878417e78e7ac6b624",
+      "transcriptionSha256": "82b3c5e56d09c48fda2750e5a13b305304c0587193f2bb7dae94c429b697553e",
+      "scoringSha256": "9968a56277175829e5360b241266194ad31c1c79f34b497e37161619859f4d05",
+      "scoringVersion": "10SATs_3rd-test-3-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 161,
+        "total": 161
+      },
+      "period": {
+        "sourceSha256": "f865621074adbf1206934077658543df0bdf203956559c5e625c803078940205",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1988
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_3rd-test-4": {
+      "status": "verified",
+      "assetSha256": "aa6776a1c5670fbf4b78b2d6c6b49d0b3894344449f341aafa6d5252175077fa",
+      "transcriptionSha256": "e446b55937919b6ff1759a624f94aed8f95a421bec09440ee99fa64762e1fdcd",
+      "scoringSha256": "cc330cedd5ba7de56889fa7bbff1fc7c643de27239ef8a978f2bd01bd1f11eb0",
+      "scoringVersion": "10SATs_3rd-test-4-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 144,
+        "total": 144
+      },
+      "key": {
+        "checked": 144,
+        "total": 144
+      },
+      "scale": {
+        "checked": 162,
+        "total": 162
+      },
+      "period": {
+        "sourceSha256": "f865621074adbf1206934077658543df0bdf203956559c5e625c803078940205",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1988
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_3rd-test-5": {
+      "status": "verified",
+      "assetSha256": "60c08b9dc8b5873a98b38bd07d481f7118a8cf2a7245c3c9791a146a9a8c2d14",
+      "transcriptionSha256": "a9e4d7b2cb832ae6cab891e3f5f775e51b72372a6b2c633e35461014b8129910",
+      "scoringSha256": "b38ed8f0c170d4dbfccbd5af72ab110277fd6d9181b9f6ae6c7cf09d6da1c311",
+      "scoringVersion": "10SATs_3rd-test-5-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 159,
+        "total": 159
+      },
+      "period": {
+        "sourceSha256": "f865621074adbf1206934077658543df0bdf203956559c5e625c803078940205",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1988
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_3rd-test-6": {
+      "status": "verified",
+      "assetSha256": "90e220c79b7309619536487ec59dacb2bc94f2d4c9bd12dcc4b565803ee75e47",
+      "transcriptionSha256": "bdb7f0ddb32ddc59c366bd07f43b81d9257868f631620a011529bc10c8ba2000",
+      "scoringSha256": "e2de86034a6317d3497bea41359b71abd59713315d90b56f211cb70abfa6d04f",
+      "scoringVersion": "10SATs_3rd-test-6-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 144,
+        "total": 144
+      },
+      "key": {
+        "checked": 144,
+        "total": 144
+      },
+      "scale": {
+        "checked": 164,
+        "total": 164
+      },
+      "period": {
+        "sourceSha256": "f865621074adbf1206934077658543df0bdf203956559c5e625c803078940205",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1988
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_3rd-test-7": {
+      "status": "verified",
+      "assetSha256": "31df519ed101bafe79b0c8eb6c2bb225cc43795c33635a0a1e9a66c23b4d2309",
+      "transcriptionSha256": "d890e3232d4df7677905e4614395736e7fb961e0e4b2e25cbc113306e42644a5",
+      "scoringSha256": "54fa9148ebedb13ba8f9eabfe0dd72fa3134d4d4cdfcecc1a994f0e67be29a3f",
+      "scoringVersion": "10SATs_3rd-test-7-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 144,
+        "total": 144
+      },
+      "key": {
+        "checked": 144,
+        "total": 144
+      },
+      "scale": {
+        "checked": 158,
+        "total": 158
+      },
+      "period": {
+        "sourceSha256": "f865621074adbf1206934077658543df0bdf203956559c5e625c803078940205",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1988
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_3rd-test-8": {
+      "status": "verified",
+      "assetSha256": "ad953df72a99416b387933f719555f35db34a5f48a616c7045ebb24b749b93cf",
+      "transcriptionSha256": "da41777931ffda27f5969c79f983d87a631c1153a5c5384e570f3418027cdf66",
+      "scoringSha256": "3ff5cb9d2692ed7a2b0864cf17444b72a6d3afa7ec0bd754023c11e425b28121",
+      "scoringVersion": "10SATs_3rd-test-8-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 157,
+        "total": 157
+      },
+      "period": {
+        "sourceSha256": "f865621074adbf1206934077658543df0bdf203956559c5e625c803078940205",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1988
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_3rd-test-9": {
+      "status": "verified",
+      "assetSha256": "de5e482ed9376c71171265db3acfb90a82f9d7bfe45b3c7fd9cdc0736092ea3a",
+      "transcriptionSha256": "52952af9e8555ea02f59c0ba29aee8f82e87ef3e63f2752194282b3e3fbb00f1",
+      "scoringSha256": "fdd8902865ec55ed1616d655caa2f5d52e11d2e2c69b57df6adc6fb47b79dd7a",
+      "scoringVersion": "10SATs_3rd-test-9-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 161,
+        "total": 161
+      },
+      "period": {
+        "sourceSha256": "f865621074adbf1206934077658543df0bdf203956559c5e625c803078940205",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1988
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "10SATs_3rd-test-10": {
+      "status": "verified",
+      "assetSha256": "d2e79445b49fd55cd48d28b59e1eaf942b44070cdc1f3ec94000267b9240e12c",
+      "transcriptionSha256": "708d51e6b85624e0a8a9be006f8e64b8c7e8413124421c9feaf28d4fc9cfa8d1",
+      "scoringSha256": "03ae2f46b6ee533d2fd56055e8e2b6ecc643332075d596a2f24960cdd6780bda",
+      "scoringVersion": "10SATs_3rd-test-10-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 163,
+        "total": 163
+      },
+      "period": {
+        "sourceSha256": "f865621074adbf1206934077658543df0bdf203956559c5e625c803078940205",
+        "sourcePage": 4,
+        "copyrightYears": [
+          1988
+        ],
+        "publisher": "College Entrance Examination Board",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "012a3140": {
+      "status": "verified",
+      "assetSha256": "041c5155bdd09eea8195a68b59652bb6685dde577a5df04960ff54c9c769573f",
+      "transcriptionSha256": "adb196b067f7cc8835e0f91de49bb8dab6f45d0001171e8049392ee6d3a2758a",
+      "scoringSha256": "173ced7e291537eeab4706a96cc5e3e8ebac6840bef4d74ce1a936c5aec3045f",
+      "scoringVersion": "012a3140-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 159,
+        "total": 159
+      },
+      "period": {
+        "sourceSha256": "95598f8a4c6d002fdd2abd30197d08e625180e47005bb4fbd97dff7eed8776f2",
+        "sourcePage": 1,
+        "copyrightYears": [
+          1986
+        ],
+        "publisher": "Educational Testing Service",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "09451a48": {
+      "status": "verified",
+      "assetSha256": "d63d174ab1602326aa87163a74e7d83e8ad4e70f19814ad54a5fbed41b06dec9",
+      "transcriptionSha256": "f2b9b451dc222ae377f68fd9975e2ff8f42411cc4790e0b129eca3eb1c78fc39",
+      "scoringSha256": "e0a95a2bcb9d530ba34148e3a8038f89f44d98a54a281e4943f49eb542bed50d",
+      "scoringVersion": "09451a48-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 165,
+        "total": 165
+      },
+      "period": {
+        "sourceSha256": "c7ea743e07eb236b64bd63ac4b97a47d22814a33cbcf09607c950c852221a601",
+        "sourcePage": 1,
+        "copyrightYears": [
+          1982,
+          1983,
+          1984
+        ],
+        "publisher": "Educational Testing Service",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "151e61b7": {
+      "status": "verified",
+      "assetSha256": "ea1349d0458da549e3c10300ed41adcbed592abba4d2d1416b8c2fd3ee4352f8",
+      "transcriptionSha256": "872fb1a509e6ff2e776b89f2e46d190a01cbfe696c1b384b94956d56d1c288c2",
+      "scoringSha256": "3c2e469fa107aa379eb8dad11c368e426fcf7450619c6a770a539ff8a5aa54c8",
+      "scoringVersion": "151e61b7-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 157,
+        "total": 157
+      },
+      "period": {
+        "sourceSha256": "f5c4aac081c491dd137262c0695fdddc5c7ca18e9f052edb72cab1edbd05c9ed",
+        "sourcePage": 1,
+        "copyrightYears": [
+          1983,
+          1984,
+          1985
+        ],
+        "publisher": "Educational Testing Service",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "44c1853d": {
+      "status": "verified",
+      "assetSha256": "8c989d587b73876a48891a70fe1c8a985e583906163a88bb78781e57eb7e70e2",
+      "transcriptionSha256": "3278da181c38d699fc334d454dd503658850a6991d8ec86179fc6db2bb761008",
+      "scoringSha256": "6fba1c996a5318ac2ef44a9ca089aa0995e47d6a714ee722c7f09e8e6f4b92e3",
+      "scoringVersion": "44c1853d-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 163,
+        "total": 163
+      },
+      "period": {
+        "sourceSha256": "004dafdcaa397e7b75d9f9a19d19984d47c3e1fc89355e981526e0fc4e46d568",
+        "sourcePage": 1,
+        "copyrightYears": [
+          1984
+        ],
+        "publisher": "Educational Testing Service",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "9ab02bc9": {
+      "status": "verified",
+      "assetSha256": "886e7d5dd5e67f68c432db5efb9ddebdeb58d8980937dacff1a996b499b548cd",
+      "transcriptionSha256": "96a181d2add91787399d734dce39398bb23d59c9d4c8eccc62bec10cf3da487d",
+      "scoringSha256": "2208f632bd05604a2adccb62c070c27a4b9bad337fdb0d4cfeda57b44f66cc78",
+      "scoringVersion": "9ab02bc9-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 159,
+        "total": 159
+      },
+      "period": {
+        "sourceSha256": "e91a28d4c9cafde2f8a37473929426ab08a201e5ba158ff985443d9bd3bbdee1",
+        "sourcePage": 1,
+        "copyrightYears": [
+          1985
+        ],
+        "publisher": "Educational Testing Service",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    },
+    "eed9ccf8": {
+      "status": "verified",
+      "assetSha256": "4475d9d61cd350e71851a8f9dd798903d86c2dcae33ae0816fa814c2fd6c4fd3",
+      "transcriptionSha256": "7e0307366e5f1c7c009e4db4647b723bdc076bd4940b763edd6d3aeca00fcb39",
+      "scoringSha256": "243c6ce8274ae7592d332284b050b5a9d66a1e639c9b5164e6052e6c604d0dca",
+      "scoringVersion": "eed9ccf8-1",
+      "scoringReady": true,
+      "unresolved": 0,
+      "transcription": {
+        "checked": 145,
+        "total": 145
+      },
+      "key": {
+        "checked": 145,
+        "total": 145
+      },
+      "scale": {
+        "checked": 161,
+        "total": 161
+      },
+      "period": {
+        "sourceSha256": "b25a073e6da2cf56eb743493eeb123f3c7e37b930d23c9c45b495495f77df9f5",
+        "sourcePage": 1,
+        "copyrightYears": [
+          1987
+        ],
+        "publisher": "Educational Testing Service",
+        "method": "Visually read the dated publisher copyright line from the original PDF. This establishes the supported period, not an exact administration date."
+      },
+      "approvedCorrections": []
+    }
+  }
+}

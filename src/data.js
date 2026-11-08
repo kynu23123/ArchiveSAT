@@ -1,80 +1,39 @@
+import { curatedForms, referenceCatalog } from "./historical.js";
+import { estimateIndexIq, estimateIq, scaleIndex, scoringFor } from "./scoring.js";
+import sourceExclusions from "../historical/source-exclusions.json";
+import { excludedSource } from "./authenticity.js";
+
 export const indexes = ["Verbal", "Math"];
-
-const questions = [
-  { index: "Verbal", prompt: "In the sentence below, which word is closest in meaning to concise?", passage: "The editor praised the report for its concise summary of a complicated issue.", choices: ["Detailed", "Brief", "Informal", "Uncertain", "Critical"], key: 1 },
-  { index: "Verbal", prompt: "Which word best completes the sentence?", passage: "Though the path looked steep from below, the climb proved surprisingly ____.", choices: ["Manageable", "Distant", "Cautious", "Artificial", "Fragile"], key: 0 },
-  { index: "Verbal", prompt: "Which pair has the same relationship as atlas : maps?", choices: ["Clock : minutes", "Garden : rain", "Dictionary : definitions", "Compass : north", "Shelf : wood"], key: 2 },
-  { index: "Verbal", prompt: "What does the second sentence imply about the astronomer?", passage: "Clouds covered the sky on the night of the observation. The astronomer set an alarm for dawn, when the forecast called for clear skies.", choices: ["They had completed the observation.", "They expected clouds until noon.", "They had lost their equipment.", "They planned to try again.", "They had changed fields."], key: 3 },
-  { index: "Math", prompt: "If 3x + 5 = 26, what is the value of x?", choices: ["5", "6", "7", "8", "9"], key: 2 },
-  { index: "Math", prompt: "A rectangle has an area of 48 and a width of 6. What is its perimeter?", choices: ["14", "22", "24", "28"], key: 3 },
-  { index: "Math", prompt: "A bag contains 3 red marbles and 5 blue marbles. What is the probability of drawing a red marble?", choices: ["1/5", "3/8", "1/2", "3/5", "5/8"], key: 1 },
-  { index: "Math", prompt: "The average of 7, 11, and n is 10. What is n?", choices: ["8", "10", "11", "12"], key: 3 },
-];
-
-export const satToIq = [
-  [600, 89], [650, 93], [700, 97], [750, 100], [800, 103], [850, 106],
-  [900, 109], [950, 112], [1000, 114], [1050, 117], [1100, 120],
-  [1150, 123], [1200, 127], [1250, 130], [1300, 134], [1350, 137],
-  [1400, 140], [1450, 145], [1500, 150], [1550, 155], [1600, 166],
-];
-
-export const scoringProfiles = {
-  sample: {
-    label: "Sample scoring profile",
-    penalties: { 4: 1 / 3, 5: 1 / 4 },
-    round: Math.round,
-    scaledByRaw: {
-      Verbal: { "-1": 200, 0: 250, 1: 380, 2: 510, 3: 650, 4: 800 },
-      Math: { "-1": 200, 0: 260, 1: 400, 2: 530, 3: 680, 4: 800 },
-    },
-    iqByIndex: {
-      Verbal: [[200, 75], [400, 100], [600, 124], [800, 150]],
-      Math: [[200, 75], [400, 98], [600, 122], [800, 150]],
-    },
-  },
-};
-
-export const seedForms = [
-  { id: "93", title: "October 1993 SAT", code: "Form 02", indexes, profileId: "sample" },
-  { id: "92", title: "May 1992 SAT", code: "Form 03", indexes, profileId: "sample" },
-  { id: "91", title: "October 1991 SAT", code: "Form 01", indexes, profileId: "sample" },
-  { id: "90", title: "May 1990 SAT", code: "Form 04", indexes, profileId: "sample" },
-  { id: "89", title: "October 1989 SAT", code: "Form 05", indexes, profileId: "sample" },
-];
-
-const samples = [
-  ["89", "May 12", 510, 530, [1, 2, 2, 1, 2, 0, 1, 1]],
-  ["90", "May 19", 550, 580, [1, 0, 2, 1, 2, 3, 0, 1]],
-  ["91", "May 26", 540, 570, [1, 0, 3, 2, 2, 3, 0, 2]],
-  ["92", "Jun 02", 590, 610, [1, 0, 2, 1, 2, 3, 1, 0]],
-  ["93", "Jun 09", 630, 620, [1, 0, 2, 3, 2, 3, 1, 2]],
-];
-
+export const seedForms = curatedForms;
 export const storageKey = "sat-archive-prototype-v1";
-export const initialState = {
-  forms: seedForms,
-  attempts: { "93": { answers: { 0: 1, 1: 0, 2: 2 }, cursor: 3 } },
-  results: [...samples].reverse().map(([formId, date, verbal, math, answers]) => ({
-    id: "sample-" + formId, formId, date, sample: true,
-    answers: { ...answers }, scaled: { Verbal: verbal, Math: math },
-  })),
-};
+export const initialState = { practiceVersion: 2, forms: seedForms, attempts: {}, results: [] };
+
+const answerLetters = ["A", "B", "C", "D", "E"];
 
 export function questionsFor(form) {
-  return form.questions ?? questions.filter((question) => form.indexes.includes(question.index));
+  if (!form.library) return form.questions ?? [];
+  return form.sections.flatMap((section) => Array.from({ length: section.count }, (_, i) => {
+    const number = i + 1;
+    const [first, last] = section.fourChoice ?? [];
+    const choices = number >= first && number <= last ? answerLetters.slice(0, 4) : answerLetters;
+    return {
+      section: section.number, index: section.index, number, page: section.pages[0], pages: section.pages,
+      excluded: sourceExclusions[form.id]?.[section.number]?.includes(number) ?? false,
+      prompt: "Section " + section.number + " · Question " + number,
+      choices: choices.map((letter) => "Answer " + letter), key: null,
+    };
+  }));
 }
 
-export function interpolate(value, table) {
-  if (value == null || value < table[0][0] || value > table.at(-1)[0]) return null;
-  const index = table.findIndex(([input]) => input >= value);
-  const [high, highIq] = table[index];
-  if (high === value) return highIq;
-  const [low, lowIq] = table[index - 1];
-  return Math.round(lowIq + (highIq - lowIq) * (value - low) / (high - low));
+export function playableCursor(items, cursor) {
+  const item = items[cursor];
+  if (!item?.excluded) return cursor;
+  const next = items.findIndex((question, i) => i > cursor && question.section === item.section && !question.excluded);
+  return next < 0 ? items.findLastIndex((question) => question.section === item.section && !question.excluded) : next;
 }
 
-export function percentile(iq) {
-  if (iq == null) return null;
+export function percentileFromIq(iq) {
+  if (!Number.isFinite(iq)) return null;
   const z = (iq - 100) / (15 * Math.sqrt(2));
   const t = 1 / (1 + 0.3275911 * Math.abs(z));
   const erf = 1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-z * z);
@@ -82,48 +41,83 @@ export function percentile(iq) {
 }
 
 export function summarize(form, result) {
-  const profile = scoringProfiles[form.profileId];
   const items = questionsFor(form);
-  const sections = form.indexes.map((name) => {
-    let right = 0;
-    let wrong = 0;
-    let omitted = 0;
-    let ungraded = 0;
-    let raw = 0;
+  // Saved attempts retain raw answers so they can be graded against the current verified resource.
+  const scoring = scoringFor(form, items);
+  const completed = result.indexes ?? form.indexes;
+  const keys = scoring?.answers ?? items.map(({ key }) => key);
+  const sections = completed.map((name) => {
+    const counts = { right: 0, wrong: 0, omitted: 0, ungraded: 0 };
+    let wrongFour = 0;
+    let blankFour = 0;
     items.forEach((question, i) => {
-      if (question.index !== name) return;
+      if (question.index !== name || question.excluded) return;
       const answer = result.answers[i];
-      if (answer == null) omitted++;
-      else if (question.key == null) ungraded++;
-      else if (answer === question.key) {
-        right++;
-        raw++;
-      } else {
-        wrong++;
-        raw -= profile?.penalties[question.choices.length] ?? 0;
+      if (answer == null) counts.omitted++;
+      if (keys[i] == null) {
+        if (answer != null) counts.ungraded++;
+      } else if (answer === keys[i]) counts.right++;
+      else {
+        counts.wrong++;
+        if (question.choices.length === 4) {
+          wrongFour++;
+          if (answer == null) blankFour++;
+        }
       }
     });
-    const rounded = profile?.round(raw) ?? null;
-    const scaled = result.scaled?.[name] ?? profile?.scaledByRaw[name][rounded] ?? null;
-    const iq = profile ? interpolate(scaled, profile.iqByIndex[name]) : null;
-    return { name, right, wrong, omitted, ungraded, raw: profile ? raw : null, rounded, scaled, iq, percentile: percentile(iq) };
+    const scores = scoring ? scaleIndex(scoring, name, counts.right, wrongFour, counts.wrong - wrongFour) : { raw: null, scaled: null };
+    const original = scoring ? scaleIndex(scoring, name, counts.right, wrongFour - blankFour,
+      counts.wrong - wrongFour - (counts.omitted - blankFour)) : null;
+    const iq = estimateIndexIq(name, scores.scaled);
+    return { name, ...counts, ...scores, original, iq, percentile: percentileFromIq(iq) };
   });
-  const total = sections.length === indexes.length && sections.every((section) => section.scaled != null)
-    ? sections.reduce((sum, section) => sum + section.scaled, 0) : null;
-  const iq = interpolate(total, satToIq);
-  return { ...result, form, sections, total, iq, percentile: percentile(iq) };
+  const partial = result.partial ?? (completed.length < form.indexes.length);
+  const total = !partial && sections.length === 2 && sections.every(({ scaled }) => scaled != null)
+    ? sections.reduce((sum, { scaled }) => sum + scaled, 0) : null;
+  const estimate = estimateIq(total);
+  const title = form.title + (partial ? " (" + completed.join(" + ") + " only)" : "");
+  return { ...result, form, title, partial, sections, keys, scoringVersion: scoring?.version,
+    scored: Boolean(scoring), total, ...estimate, percentile: percentileFromIq(estimate.iq) };
 }
 
 export const ordinal = (value) => {
   if (value == null) return "—";
   const n = Math.min(99, Math.max(1, Math.round(value)));
   const suffix = n > 10 && n < 14 ? "th" : { 1: "st", 2: "nd", 3: "rd" }[n % 10] ?? "th";
-  return value < 1 ? "<1st" : value > 99 ? ">99th" : n + suffix;
+  return value < 1 ? "<1st" : value > 99 ? ">99" : n + suffix;
 };
+
+function migrateAttempt(formId, attempt) {
+  const original = referenceCatalog.forms.find((form) => form.id === formId);
+  if (!original?.indexes.includes("TSWE")) return attempt;
+  let offset = 0;
+  const retained = original.sections.flatMap((section) => {
+    const positions = Array.from({ length: section.count }, (_, i) => offset + i);
+    offset += section.count;
+    return section.index === "TSWE" ? [] : positions;
+  });
+  const answers = Object.fromEntries(retained.flatMap((position, i) =>
+    attempt.answers[position] == null ? [] : [[i, attempt.answers[position]]]));
+  if (attempt.cursor == null) return { ...attempt, answers };
+  const cursor = retained.findIndex((position) => position >= attempt.cursor);
+  return { ...attempt, answers, cursor: cursor < 0 ? retained.length - 1 : cursor };
+}
 
 export function readState() {
   try {
-    return JSON.parse(localStorage.getItem(storageKey)) ?? initialState;
+    const saved = JSON.parse(localStorage.getItem(storageKey));
+    if (!saved) return initialState;
+    const localForms = (saved.forms ?? []).filter((form) => !form.library && form.questions?.length
+      && !excludedSource({hash:form.sourceHash,name:[form.title,...(form.files ?? [])].join(" ")})
+      && !(form.files?.includes("Sample SAT paper.pdf") && form.files?.includes("Sample scoring sheet.pdf")));
+    const forms = [...localForms, ...seedForms];
+    const ids = new Set(forms.map((form) => form.id));
+    const current = saved.practiceVersion === initialState.practiceVersion;
+    const attempts = Object.fromEntries(Object.entries(saved.attempts ?? {}).filter(([id]) => ids.has(id))
+      .map(([id, attempt]) => [id, current ? attempt : migrateAttempt(id, attempt)]));
+    const results = (saved.results ?? []).filter((result) => ids.has(result.formId) && !result.sample)
+      .map((result) => current ? result : migrateAttempt(result.formId, result));
+    return { ...initialState, forms, attempts, results };
   } catch {
     return initialState;
   }

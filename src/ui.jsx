@@ -31,10 +31,14 @@ export function Button({ children, variant = "secondary", className = "", onClic
 }
 
 export function Modal({ open, onClose, title, description, children, triggerRef }) {
+  const content = useRef(null);
+  useEffect(() => {
+    if (open) content.current?.querySelector("[data-autofocus]")?.focus({ preventScroll: true });
+  }, [open, title]);
   return <Dialog.Root open={open} onOpenChange={(next) => !next && onClose()}>
     <Dialog.Portal>
       <Dialog.Overlay className="overlay" />
-      <Dialog.Content className="modal card" onOpenAutoFocus={(event) => {
+      <Dialog.Content ref={content} className="modal card" onOpenAutoFocus={(event) => {
         const target = event.currentTarget.querySelector("[data-autofocus]");
         if (target) { event.preventDefault(); target.focus(); }
       }} onCloseAutoFocus={(event) => {

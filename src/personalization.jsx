@@ -1,4 +1,5 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
+import satMark from "./assets/sat-mark.png";
 import { Button, Card } from "./ui.jsx";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/dm-sans";
@@ -50,6 +51,24 @@ function onColor(color) {
 }
 
 export function usePreferences(preferences) {
+  const accent = preferences.palettes[preferences.mode].accent;
+  useEffect(() => {
+    let live = true;
+    const image = new Image();
+    image.onload = () => {
+      if (!live) return;
+      const canvas = document.createElement("canvas");
+      canvas.width = canvas.height = 256;
+      const paint = canvas.getContext("2d");
+      paint.drawImage(image, 0, 0, 256, 256);
+      paint.globalCompositeOperation = "source-in";
+      paint.fillStyle = accent;
+      paint.fillRect(0, 0, 256, 256);
+      document.querySelector('link[rel="icon"]').href = canvas.toDataURL("image/png");
+    };
+    image.src = satMark;
+    return () => { live = false; };
+  }, [accent]);
   useLayoutEffect(() => {
     const root = document.documentElement;
     const colors = preferences.palettes[preferences.mode];
@@ -91,7 +110,7 @@ export function Personalization({ preferences: settings, onChange }) {
   }));
   const palette = (label, key) => <Color label={label} value={colors[key]} onChange={(value) => color(key, value)} />;
   return <Card className="panel personalization">
-    <div className="panel-head"><div><h3>Personalization</h3><p>Adjust the appearance of this workspace.</p></div>
+    <div className="panel-head"><div><h3>Personalization</h3><p>Adjust the appearance</p></div>
       <Button onClick={() => onChange(defaults)}>Restore appearance defaults</Button></div>
     <div className="preference-grid">
       <fieldset><legend>Theme and colors</legend>

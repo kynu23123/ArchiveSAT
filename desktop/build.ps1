@@ -6,6 +6,9 @@ $webViewVersion = '1.0.3856.49'
 $package = Join-Path $build 'webview2.nupkg'
 $compiler = Join-Path $env:WINDIR 'Microsoft.NET/Framework64/v4.0.30319/csc.exe'
 
+& python (Join-Path $project 'scripts/check_authenticity_release.py')
+if ($LASTEXITCODE -ne 0) { throw 'The release assets do not match their audit records.' }
+
 & npm.cmd --prefix $project run build
 if ($LASTEXITCODE -ne 0) { throw 'The frontend build failed.' }
 
@@ -33,7 +36,19 @@ try {
 }
 
 $icon = Join-Path $build 'sat-archive.ico'
-$png = [IO.File]::ReadAllBytes((Join-Path $PSScriptRoot 'icon.png'))
+Add-Type -AssemblyName System.Drawing
+$sourceIcon = [Drawing.Image]::FromFile((Join-Path $PSScriptRoot 'icon.png'))
+$iconBitmap = [Drawing.Bitmap]::new(256,256)
+$iconGraphics = [Drawing.Graphics]::FromImage($iconBitmap)
+$iconBuffer = [IO.MemoryStream]::new()
+try {
+    $iconGraphics.InterpolationMode = [Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+    $iconGraphics.DrawImage($sourceIcon,0,0,256,256)
+    $iconBitmap.Save($iconBuffer,[Drawing.Imaging.ImageFormat]::Png)
+    $png = $iconBuffer.ToArray()
+} finally {
+    $iconGraphics.Dispose(); $iconBitmap.Dispose(); $sourceIcon.Dispose(); $iconBuffer.Dispose()
+}
 $writer = [IO.BinaryWriter]::new([IO.File]::Create($icon))
 try {
     $writer.Write([UInt16]0)
@@ -54,7 +69,7 @@ $forms = Join-Path $build 'Microsoft.Web.WebView2.WinForms.dll'
 $loader = Join-Path $build 'WebView2Loader.dll'
 $license = Join-Path $build 'LICENSE.txt'
 $manifest = Join-Path $PSScriptRoot 'Archive.manifest'
-$output = Join-Path $build 'SAT Archive.exe'
+$output = Join-Path $build 'SAT Archived.exe'
 $rendererResources = @("/resource:$(Join-Path $dist 'index.html'),Renderer.index.html")
 $rendererResources += Get-ChildItem -LiteralPath (Join-Path $dist 'assets') -File | ForEach-Object {
     "/resource:$($_.FullName),Renderer.$($_.Name)"

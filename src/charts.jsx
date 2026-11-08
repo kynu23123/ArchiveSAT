@@ -1,7 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { ordinal, percentile } from "./data.js";
+import { ordinal, percentileFromIq } from "./data.js";
 
 export const num = (value) => value == null ? "—" : Number(value).toLocaleString("en-US");
+export const iqText = (score) => score?.iqCeiling != null ? "<" + score.iqCeiling : num(score?.iq);
+
+export function IndexScale({ score }) {
+  const x = 28 + (score - 200) / 600 * 510;
+  return <svg className="distribution mono" viewBox="0 0 566 100" role="img" aria-label={score + " on the SAT index scale from 200 to 800"}>
+    <path d="M28 53 H538" stroke="var(--line)" strokeWidth="2" />
+    {[200, 300, 400, 500, 600, 700, 800].map((tick, i) =>
+      <text key={tick} x={28 + i * 85} y="80" textAnchor="middle" fill="var(--muted)" fontSize="12">{tick}</text>)}
+    <circle cx={x} cy="53" r="5" fill="var(--accent)" />
+    <text x={x} y="33" textAnchor="middle" fill="var(--ink)" fontSize="15">{score}</text>
+  </svg>;
+}
 export const bands = [
   { label: "Very low", min: 0, max: 5 },
   { label: "Below average", min: 5, max: 25 },
@@ -44,11 +56,12 @@ function arc(start, end, r) {
   return "M " + sx + " " + sy + " A " + r + " " + r + " 0 0 1 " + ex + " " + ey;
 }
 
-export function Gauge({ iq, rank, animate = false }) {
+export function Gauge({ score, animate = false }) {
+  const { iq, iqCeiling, percentile: rank } = score ?? {};
   const percent = rank == null ? 0 : rank;
   const [x, y] = coordinates(percent, 82);
   return <div className="gauge">
-    <svg viewBox="0 0 240 143" role="img" aria-label={rank == null ? "No percentile yet" : ordinal(rank) + " percentile"}>
+    <svg viewBox="0 0 240 143" role="img" aria-label={rank == null ? "IQ estimate " + iqText(score) : ordinal(rank) + " percentile"}>
       <path d={arc(0, 100, 82)} className="gauge-track" />
       {rank != null && <path d={arc(0, percent, 82)} className="gauge-fill" />}
       {ticks.map((tick) => {
@@ -57,8 +70,8 @@ export function Gauge({ iq, rank, animate = false }) {
         return <line key={tick} x1={x1} y1={y1} x2={x2} y2={y2} className="gauge-tick"><title>{tick}th percentile</title></line>;
       })}
       {rank != null && <circle cx={x} cy={y} r="4" fill="var(--accent)" />}
-      <text x="120" y="97" className="gauge-number" textAnchor="middle">{animate ? <CountingNumber value={iq} svg /> : num(iq)}</text>
-      <text x="120" y="116" className="gauge-caption" textAnchor="middle">{ordinal(rank)}{rank == null ? "" : " percentile"}</text>
+      <text x="120" y="97" className="gauge-number" textAnchor="middle">{animate && iq != null ? <CountingNumber value={iq} svg /> : iqText(score)}</text>
+      <text x="120" y="116" className="gauge-caption" textAnchor="middle">{iqCeiling != null ? "Below table range" : ordinal(rank) + (rank == null ? "" : " percentile")}</text>
       <text x="29" y="137" className="gauge-end">5th</text>
       <text x="201" y="137" className="gauge-end" textAnchor="end">99th</text>
     </svg>
@@ -66,7 +79,7 @@ export function Gauge({ iq, rank, animate = false }) {
 }
 
 export function Distribution({ iq }) {
-  const rank = percentile(iq);
+  const rank = percentileFromIq(iq);
   const current = rank == null ? null : bands.find((band) => rank < band.max);
   const curve = Array.from({ length: 121 }, (_, i) => {
     const value = 55 + i;

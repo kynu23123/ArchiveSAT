@@ -9,11 +9,11 @@ using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
 using Microsoft.Web.WebView2.WinForms;
 
-[assembly: AssemblyTitle("SAT Archive")]
+[assembly: AssemblyTitle("SAT Archived")]
 [assembly: AssemblyDescription("Historical SAT practice and score conversions")]
-[assembly: AssemblyProduct("SAT Archive")]
-[assembly: AssemblyVersion("0.3.0.0")]
-[assembly: AssemblyFileVersion("0.3.0.0")]
+[assembly: AssemblyProduct("SAT Archived")]
+[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
 
 internal static class Program
 {
@@ -76,10 +76,51 @@ internal sealed class ArchiveWindow : Form
         "base-uri 'none'; frame-ancestors 'none'";
 
     private readonly WebView2 view = new WebView2 { Dock = DockStyle.Fill, DefaultBackgroundColor = Color.FromArgb(12, 12, 12) };
+    private bool savingOnClose;
+    private bool readyToClose;
+    private Rectangle windowedBounds;
+    private FormWindowState windowedState;
+    private int windowedStyle;
+    private bool fullscreen;
+    private int faviconVersion;
+
+    [System.Runtime.InteropServices.DllImport("user32.dll")]
+    private static extern bool DestroyIcon(IntPtr icon);
+
+    [System.Runtime.InteropServices.DllImport("user32.dll", EntryPoint = "GetWindowLongW")]
+    private static extern int GetWindowLong(IntPtr window, int index);
+    [System.Runtime.InteropServices.DllImport("user32.dll", EntryPoint = "SetWindowLongW")]
+    private static extern int SetWindowLong(IntPtr window, int index, int value);
+    [System.Runtime.InteropServices.DllImport("user32.dll")]
+    private static extern bool SetWindowPos(IntPtr window, IntPtr after, int x, int y, int width, int height, uint flags);
+
+    private void SetTestFullscreen(bool requested)
+    {
+        if (requested == fullscreen) return;
+        fullscreen = requested;
+        Rectangle bounds;
+        if (requested)
+        {
+            windowedState = WindowState;
+            windowedBounds = WindowState == FormWindowState.Normal ? Bounds : RestoreBounds;
+            WindowState = FormWindowState.Normal;
+            windowedStyle = GetWindowLong(Handle, -16);
+            // Preserve the window handle that owns the WebView controller.
+            SetWindowLong(Handle, -16, windowedStyle & ~0x00c40000);
+            bounds = Screen.FromControl(this).Bounds;
+        }
+        else
+        {
+            SetWindowLong(Handle, -16, windowedStyle);
+            bounds = windowedBounds;
+        }
+        SetWindowPos(Handle, IntPtr.Zero, bounds.X, bounds.Y, bounds.Width, bounds.Height, 0x0034);
+        if (!requested) WindowState = windowedState;
+    }
 
     internal ArchiveWindow()
     {
-        Text = "SAT Archive";
+        Text = "SAT Archived";
         Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
         BackColor = Color.FromArgb(12, 12, 12);
         FormBorderStyle = FormBorderStyle.Sizable;
@@ -89,6 +130,25 @@ internal sealed class ArchiveWindow : Form
         ClientSize = new Size(Math.Min(1440, area.Width - 32), Math.Min(900, area.Height - 64));
         Controls.Add(view);
         Shown += OpenArchive;
+    }
+
+    protected override async void OnFormClosing(FormClosingEventArgs args)
+    {
+        base.OnFormClosing(args);
+        if (args.Cancel || readyToClose || args.CloseReason != CloseReason.UserClosing || view.CoreWebView2 == null) return;
+        args.Cancel = true;
+        if (savingOnClose) return;
+        savingOnClose = true;
+        try
+        {
+            var save = view.CoreWebView2.ExecuteScriptAsync("window.dispatchEvent(new Event('sat-archive-save'))");
+            await System.Threading.Tasks.Task.WhenAny(save, System.Threading.Tasks.Task.Delay(1500));
+            if (save.IsCompleted) await save;
+        }
+        catch (InvalidOperationException) { }
+        catch (System.Runtime.InteropServices.COMException) { }
+        readyToClose = true;
+        BeginInvoke(new Action(Close));
     }
 
     private async void OpenArchive(object sender, EventArgs args)
@@ -106,8 +166,59 @@ internal sealed class ArchiveWindow : Form
             browser.Settings.AreDevToolsEnabled = false;
             browser.Settings.AreDefaultContextMenusEnabled = false;
             browser.Settings.IsStatusBarEnabled = false;
-            browser.Settings.IsWebMessageEnabled = false;
-            browser.NewWindowRequested += (source, request) => request.Handled = true;
+            browser.Settings.IsWebMessageEnabled = true;
+            browser.WebMessageReceived += (source, message) =>
+            {
+                Uri origin;
+                if (!Uri.TryCreate(message.Source, UriKind.Absolute, out origin) || !IsAppOrigin(origin) || origin.AbsolutePath != "/") return;
+                string command;
+                try { command = message.TryGetWebMessageAsString(); }
+                catch (ArgumentException) { return; }
+                if (command == "test-fullscreen:enter") SetTestFullscreen(true);
+                else if (command == "test-fullscreen:exit") SetTestFullscreen(false);
+            };
+            browser.FaviconChanged += async (source, change) =>
+            {
+                int version = ++faviconVersion;
+                try
+                {
+                    using (var stream = await browser.GetFaviconAsync(CoreWebView2FaviconImageFormat.Png))
+                    {
+                        if (IsDisposed || stream == null || version != faviconVersion) return;
+                        // GDI+ needs a seekable stream; the WebView favicon stream is forward-only.
+                        using (var buffer = new MemoryStream())
+                        {
+                            stream.CopyTo(buffer);
+                            buffer.Position = 0;
+                            using (var bitmap = new Bitmap(buffer))
+                            {
+                                IntPtr handle = bitmap.GetHicon();
+                                try
+                                {
+                                    var old = Icon;
+                                    Icon = (Icon)Icon.FromHandle(handle).Clone();
+                                    if (old != null) old.Dispose();
+                                }
+                                finally { DestroyIcon(handle); }
+                            }
+                        }
+                    }
+                }
+                catch (ArgumentException) { }
+                catch (InvalidOperationException) { }
+                catch (NotImplementedException) { }
+                catch (NotSupportedException) { }
+                catch (System.Runtime.InteropServices.COMException) { }
+            };
+            browser.ContainsFullScreenElementChanged += (source, change) => SetTestFullscreen(browser.ContainsFullScreenElement);
+            browser.NewWindowRequested += (source, request) =>
+            {
+                request.Handled = true;
+                if (!request.IsUserInitiated || browser.Source != Home
+                    || request.Uri != "https://cognitivemetrics.com/wiki/old-sat") return;
+                try { System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(request.Uri) { UseShellExecute = true }); }
+                catch (System.ComponentModel.Win32Exception) { MessageBox.Show(this, "Open https://cognitivemetrics.com/wiki/old-sat in your browser.", "Reference link"); }
+            };
             browser.PermissionRequested += (source, request) => request.State = CoreWebView2PermissionState.Deny;
             browser.NavigationStarting += (source, request) =>
             {
@@ -124,9 +235,9 @@ internal sealed class ArchiveWindow : Form
         {
             if (IsDisposed) return;
             string message = error is WebView2RuntimeNotFoundException
-                ? "Install the Microsoft Edge WebView2 Runtime, then open SAT Archive again."
-                : "SAT Archive could not start. " + error.Message;
-            MessageBox.Show(this, message, "SAT Archive", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ? "Install the Microsoft Edge WebView2 Runtime, then open SAT Archived again."
+                : "SAT Archived could not start. " + error.Message;
+            MessageBox.Show(this, message, "SAT Archived", MessageBoxButtons.OK, MessageBoxIcon.Error);
             Close();
         }
     }
@@ -166,7 +277,7 @@ internal sealed class ArchiveWindow : Form
                 content = Program.Bundle.GetManifestResourceStream("Renderer.index.html");
                 headers = "Content-Type: text/html; charset=utf-8\r\nContent-Security-Policy: " + ContentPolicy;
             }
-            else if (Regex.IsMatch(url.AbsolutePath, @"^/assets/[A-Za-z0-9._-]+\.(js|mjs|css|woff2|pdf)$"))
+            else if (Regex.IsMatch(url.AbsolutePath, @"^/assets/[A-Za-z0-9._-]+\.(js|mjs|css|woff2|pdf|json|png)$"))
             {
                 string name = Path.GetFileName(url.AbsolutePath);
                 content = Program.Bundle.GetManifestResourceStream("Renderer." + name);
@@ -177,6 +288,8 @@ internal sealed class ArchiveWindow : Form
                     case ".mjs": mime = "text/javascript"; break;
                     case ".css": mime = "text/css"; break;
                     case ".pdf": mime = "application/pdf"; break;
+                    case ".json": mime = "application/json"; break;
+                    case ".png": mime = "image/png"; break;
                     default: mime = "font/woff2"; break;
                 }
                 headers = "Content-Type: " + mime;
@@ -188,3 +301,4 @@ internal sealed class ArchiveWindow : Form
             : environment.CreateWebResourceResponse(content, 200, "OK", headers);
     }
 }
+

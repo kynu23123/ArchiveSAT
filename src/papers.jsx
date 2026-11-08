@@ -1,60 +1,55 @@
 import React, { useEffect, useRef, useState } from "react";
+import { excludedSource } from "./authenticity.js";
 import { ArrowLeft, ArrowRight, FileSpreadsheet, FileText, ListChecks, Minus, Plus } from "lucide-react";
 import { inspectPdf, openPdf, parseNumbers, readPapers, savePapers } from "./pdf.js";
 import { Button } from "./ui.jsx";
-import samplePaper from "../samples/paper.pdf?url&no-inline";
-import sampleScoring from "../samples/scoring.pdf?url&no-inline";
+import { loadReferencePdf } from "./historical.js";
 
-export function ImageCard({ file, page, title }) {
+export function ImageCard({ file, page, title, historical = false }) {
   const canvas = useRef(null);
-  const scrollArea = useRef(null);
   const [document, setDocument] = useState(null);
   const [status, setStatus] = useState("");
   const [zoom, setZoom] = useState(100);
-  const [displayPixels, setDisplayPixels] = useState(0);
+  const [pixelRatio, setPixelRatio] = useState(() => window.devicePixelRatio);
+  const [renderedPage, setRenderedPage] = useState(null);
 
   useEffect(() => {
     setDocument(null);
+    setRenderedPage(null);
     if (!file) return;
     let live = true;
-    const pdf = openPdf(file);
+    setStatus("Opening PDF…");
+    const pdf = openPdf(file, historical);
     pdf.document.then((value) => { if (live) setDocument(value); }).catch(() => {
       if (live) setStatus("This PDF could not be opened.");
     });
     return () => { live = false; void pdf.close(); };
-  }, [file]);
+  }, [file, historical]);
 
   useEffect(() => {
-    if (!file) return;
-    const area = scrollArea.current;
-    const measure = () => setDisplayPixels(Math.ceil(area.clientWidth * window.devicePixelRatio));
-    const observer = new ResizeObserver(measure);
-    observer.observe(area);
-
     let resolution;
     function watchResolution() {
       resolution?.removeEventListener("change", watchResolution);
       resolution = matchMedia(`(resolution: ${window.devicePixelRatio}dppx)`);
       resolution.addEventListener("change", watchResolution);
-      measure();
+      setPixelRatio(window.devicePixelRatio);
     }
     watchResolution();
     return () => {
-      observer.disconnect();
       resolution.removeEventListener("change", watchResolution);
     };
-  }, [file]);
+  }, []);
 
   useEffect(() => {
-    if (!document || !displayPixels) return;
+    if (!document) return;
     let live = true;
     let render;
     setStatus("Rendering page…");
     document.getPage(page).then((pdfPage) => {
       if (!live) return;
-      const surface = canvas.current;
+      const surface = window.document.createElement("canvas");
       const pageSize = pdfPage.getViewport({ scale: 1 });
-      const fitScale = Math.max(2, displayPixels / pageSize.width);
+      const fitScale = Math.max(2.5, 1.8 * pixelRatio);
       const scale = Math.min(
         fitScale * zoom / 100,
         8192 / Math.max(pageSize.width, pageSize.height),
@@ -64,10 +59,18 @@ export function ImageCard({ file, page, title }) {
       surface.width = Math.ceil(viewport.width);
       surface.height = Math.ceil(viewport.height);
       render = pdfPage.render({ canvas: surface, viewport });
-      return render.promise.then(() => { if (live) setStatus(""); });
+      return render.promise.then(() => {
+        if (!live) return;
+        const visible = canvas.current;
+        visible.width = surface.width;
+        visible.height = surface.height;
+        visible.getContext("2d").drawImage(surface, 0, 0);
+        setRenderedPage(page);
+        setStatus("");
+      });
     }).catch(() => { if (live) setStatus("This page could not be rendered."); });
     return () => { live = false; render?.cancel(); };
-  }, [document, page, zoom, displayPixels]);
+  }, [document, page, zoom, pixelRatio]);
 
   return <figure className="paper-image-card">
     <figcaption><strong>{title}</strong><div className="zoom-tools">
@@ -76,33 +79,44 @@ export function ImageCard({ file, page, title }) {
       <Button className="icon-button" aria-label="Zoom in" disabled={zoom >= 250} onClick={() => setZoom(zoom + 50)}><Plus /></Button>
     </div></figcaption>
     {!file ? <p className="empty-line">The source PDF is unavailable in this profile.</p> : <>
-      {status && <p role="status" className="paper-status">{status}</p>}
-      <div ref={scrollArea} className="paper-image-scroll" tabIndex={0} aria-label="Scrollable original PDF page">
-        <canvas ref={canvas} role="img" aria-label={title} style={{ width: zoom + "%" }} hidden={!document || Boolean(status)} />
+      <div className="paper-image-frame">
+        {status && <p role="status" className="paper-status paper-render-status">{status}</p>}
+        <div className="paper-image-scroll" tabIndex={0} aria-label="Scrollable original PDF page">
+          <canvas ref={canvas} role="img" aria-label={title} style={{ width: zoom + "%" }} aria-hidden={renderedPage !== page} hidden={renderedPage == null} />
+        </div>
       </div>
     </>}
   </figure>;
 }
 
+function readFormPapers(form) {
+  return form.library ? loadReferencePdf(form.asset).then((paper) => ({ paper })) : readPapers(form.id);
+}
+
 export function PaperQuestion({ form, item }) {
   const [files, setFiles] = useState(null);
-  const [page, setPage] = useState(item.page);
+  const [selected, setSelected] = useState(null);
   useEffect(() => {
     let live = true;
-    readPapers(form.id).then((files) => { if (live) setFiles(files ?? {}); })
+    readFormPapers(form).then((files) => { if (live) setFiles(files ?? {}); })
       .catch(() => { if (live) setFiles({}); });
     return () => { live = false; };
-  }, [form.id]);
-  useEffect(() => setPage(item.page), [item]);
-  const pages = form.paperPages;
+  }, [form]);
+  const pages = item.pages ?? form.paperPages;
+  const page = selected?.referencePage === item.page ? selected.page : item.page;
+  const selectPage = (page) => setSelected({ referencePage: item.page, page });
+  const original = form.sections?.find((section) => section.number === item.section)?.sourcePages;
+  const pageIndex = pages.indexOf(page);
   if (!files) return <p role="status" className="paper-status">Opening source paper…</p>;
   return <div className="paper-question">
-    <label className="field paper-page-picker"><span>Question paper page</span>
-      <select aria-label="Question paper page" value={page} onChange={(event) => setPage(Number(event.target.value))}>
-        {pages.map((number) => <option value={number} key={number}>Page {number}</option>)}
+    <div className="review-navigation paper-page-picker">
+      <Button aria-label="Previous paper page" disabled={pageIndex <= 0} onClick={() => selectPage(pages[pageIndex - 1])}><ArrowLeft /></Button>
+      <select aria-label="Question paper page" value={page} onChange={(event) => selectPage(Number(event.target.value))}>
+        {pages.map((number, i) => <option value={number} key={number}>Source PDF page {original?.[i] ?? number}</option>)}
       </select>
-    </label>
-    <ImageCard key={page} file={files.paper} page={page} title={"Original paper · page " + page} />
+      <Button aria-label="Next paper page" disabled={pageIndex >= pages.length - 1} onClick={() => selectPage(pages[pageIndex + 1])}><ArrowRight /></Button>
+    </div>
+    <ImageCard file={files.paper} page={page} historical={form.library} title={"Original paper · page " + (original?.[pageIndex] ?? page)} />
   </div>;
 }
 
@@ -113,12 +127,27 @@ export function ScoringPages({ form }) {
   if (!pages?.length) return null;
   const page = pages[active];
   return <details className="scoring-source" onToggle={(event) => {
-    if (event.currentTarget.open && !files) readPapers(form.id).then((value) => setFiles(value ?? {})).catch(() => setFiles({}));
+    if (event.currentTarget.open && !files) readFormPapers(form).then((value) => setFiles(value ?? {})).catch(() => setFiles({}));
   }}>
     <summary>Original scoring pages ({pages.length})</summary>
     {files ? <><label className="field"><span>Scoring page</span><select aria-label="Scoring page" value={active} onChange={(event) => setActive(Number(event.target.value))}>
-      {pages.map(({ source, number }, i) => <option key={source + number} value={i}>{source === "paper" ? "SAT paper" : "Scoring PDF"} · page {number}</option>)}
-    </select></label><ImageCard key={page.source + page.number} file={files[page.source]} page={page.number} title={"Scoring reference · page " + page.number} /></> : null}
+      {pages.map(({ source, number, label, originalPage }, i) => <option key={source + number} value={i}>{label ?? (source === "paper" ? "SAT paper" : "Scoring PDF")} · page {originalPage ?? number}</option>)}
+    </select></label><ImageCard key={page.source} file={files[page.source]} page={page.number} historical={form.library} title={(page.label ?? "Scoring reference") + " · page " + (page.originalPage ?? page.number)} /></> : null}
+  </details>;
+}
+
+export function ReferenceViewer({ source }) {
+  const [file, setFile] = useState(null);
+  const [page, setPage] = useState(1);
+  const [error, setError] = useState(false);
+  return <details className="scoring-source" onToggle={(event) => {
+    if (event.currentTarget.open && !file) loadReferencePdf(source.referenceFile).then(setFile).catch(() => setError(true));
+  }}>
+    <summary>View reference PDF excerpt</summary>
+    {error && <p role="alert">The reference PDF could not be opened.</p>}
+    {file && <><select aria-label="Reference PDF page" value={page} onChange={(event) => setPage(Number(event.target.value))}>
+      {source.referencePages.map((original, i) => <option key={i} value={i + 1}>Source PDF page {original}</option>)}
+    </select><ImageCard file={file} page={page} historical title={"Source PDF page " + source.referencePages[page - 1]} /></>}
   </details>;
 }
 
@@ -130,7 +159,6 @@ function Attachment({ label, file, onChange, icon: Icon, hint }) {
 }
 
 const letters = ["A", "B", "C", "D", "E"];
-const sampleName = "SAT Archive sample";
 
 function recognizedKey(page, pages) {
   const known = new Map();
@@ -159,32 +187,24 @@ export function ImportForm({ onCreate, onClose }) {
     return () => { active.current = false; };
   }, []);
 
-  async function review(event, sample = false) {
-    event?.preventDefault();
+  async function review(event) {
+    event.preventDefault();
     setError("");
     setPending("Reading PDF pages…");
     try {
-      let selected = files;
-      if (sample) {
-        const [paper, scoring] = await Promise.all([samplePaper, sampleScoring].map(async (url) => {
-          const response = await fetch(url);
-          if (!response.ok) throw Error("Could not open the sample PDFs.");
-          return response.blob();
-        }));
-        selected = {
-          paper: new File([paper], "Sample SAT paper.pdf", { type: "application/pdf" }),
-          scoring: new File([scoring], "Sample scoring sheet.pdf", { type: "application/pdf" }),
-        };
-      }
+      const hashes = await Promise.all(Object.values(files).filter(Boolean).map(async (file) => {
+        const hash = await crypto.subtle.digest("SHA-256", await file.arrayBuffer());
+        return Array.from(new Uint8Array(hash), (n) => n.toString(16).padStart(2,"0")).join("");
+      }));
+      const rejected = () => Error("Form 7W is excluded because the source has duplicate pages and missing questions.");
+      if (hashes.some((hash) => excludedSource({ hash })) || excludedSource({ name: name + " " + files.paper.name })) throw rejected();
       const found = await Promise.all([
-        inspectPdf(selected.paper, "paper"),
-        selected.scoring ? inspectPdf(selected.scoring, "scoring", true) : [],
+        inspectPdf(files.paper, "paper"),
+        files.scoring ? inspectPdf(files.scoring, "scoring", true) : [],
       ]);
+      if (found.flat().some(({ text }) => excludedSource({ text }))) throw rejected();
       if (!active.current) return;
-      setFiles(selected);
-      if (sample) setName(sampleName);
-      const allPages = found.flat();
-      setPages(sample ? allPages.map((page) => page.type === "questions" ? { ...page, key: recognizedKey(page, allPages) } : page) : allPages);
+      setPages(found.flat());
       setCursor(0);
     } catch (failure) {
       if (active.current) setError(failure.message || "The PDF could not be read.");
@@ -236,9 +256,8 @@ export function ImportForm({ onCreate, onClose }) {
     <label className="field"><span>Test name</span><input data-autofocus value={name} required onChange={(event) => setName(event.target.value)} placeholder="e.g. October 1993 SAT" maxLength={90} /></label>
     <Attachment label="SAT paper" file={files.paper} onChange={(paper) => setFiles({ ...files, paper })} icon={FileText} hint="Question PDF, with or without scoring pages" />
     <Attachment label="Scoring sheets" file={files.scoring} onChange={(scoring) => setFiles({ ...files, scoring })} icon={FileSpreadsheet} hint="Optional separate PDF" />
-    <div className="sample-links"><a href={samplePaper} download="Sample SAT paper.pdf">Sample paper PDF</a><a href={sampleScoring} download="Sample scoring sheet.pdf">Sample scoring PDF</a></div>
     {error && <p role="alert" className="form-error">{error}</p>}
-    <div className="modal-actions"><Button onClick={onClose}>Cancel</Button><Button onClick={() => review(null, true)}>Use sample PDFs</Button><Button type="submit" variant="primary" disabled={!files.paper || !name.trim()}>Review PDF</Button></div>
+    <div className="modal-actions"><Button onClick={onClose}>Cancel</Button><Button type="submit" variant="primary" disabled={!files.paper || !name.trim()}>Review PDF</Button></div>
   </form>;
 
   const page = pages[cursor];
@@ -272,7 +291,7 @@ export function ImportForm({ onCreate, onClose }) {
         <label className="field"><span>Verified key (optional)</span><input value={page.key ?? ""} placeholder="A B – D" onChange={(event) => update({ key: event.target.value.replaceAll("–", "-") })} /></label></div>
       <Button onClick={readKey}>Fill key from recognized rows</Button>
     </>}
-    <ImageCard key={page.source + page.number} file={files[page.source]} page={page.number} title={"Original PDF · page " + page.number} />
+    <ImageCard key={page.source} file={files[page.source]} page={page.number} title={"Original PDF · page " + page.number} />
     {error && <p role="alert" className="form-error">{error}</p>}
     <div className="modal-actions"><Button onClick={() => { setPages(null); setError(""); }}>Back</Button><Button variant="primary" onClick={create}>Create test</Button></div>
   </div>;
